@@ -42,6 +42,8 @@ group :development, :test do
   gem 'cancancan'
   gem 'carrierwave'
   gem 'rmagick'
+  gem 'omniauth'
+  gem 'omniauth-facebook'
 end
 
 group :development do

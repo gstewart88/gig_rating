@@ -9,6 +9,7 @@
 User.delete_all
 ['registered', 'banned', 'moderator', 'admin'].each do |role|
   Role.find_or_create_by({name: role})
+end
 
 
 
@@ -17,8 +18,8 @@ Venue.create!(name: 'Glasgow Theatre Royal', location: 'Glasgow, Bath Street')
 Venue.create!(name: 'Manchester Theatre Royal', location: 'Manchester, Rigg Street')
 Venue.create!(name: 'Edinburgh Theatre Royal', location: 'Edinburgh, Mayor Street')
 
-Show.delete_all
-Show.create!(name: 'Matilda the Musical', genre: gn2, description: d1, gig_image: File.open(File.join(Rails.root,"/public/images/Matilda.jpeg")))
+# Show.delete_all
+# Show.create!(name: 'Matilda the Musical', genre: gn2, description: d1, gig_image: File.open(File.join(Rails.root,"/public/images/Matilda.jpeg")))
 
 Genre.delete_all
 Genre.delete_all
