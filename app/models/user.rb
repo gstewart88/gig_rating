@@ -4,7 +4,23 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-   def role?(role_to_compare)
-     self.role.to_s == role_to_compare.to_s
-   end
+  belongs_to  :role
+  before_create :set_default_role
+   
+
+ def role?(role_to_compare_to)
+   role_to_compare_to.to_s == self.role.try(:name).to_s
+ end
+
+ private
+ 
+ def set_default_role
+   self.role ||= Role.find_by_name('registered')
+ end
+
+
+
+
+
+
 end
