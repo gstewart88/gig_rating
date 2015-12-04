@@ -18,16 +18,38 @@ Venue.create!(name: 'Manchester Theatre Royal', location: 'Manchester, Rigg Stre
 Venue.create!(name: 'Edinburgh Theatre Royal', location: 'Edinburgh, Mayor Street')
 
 Show.delete_all
+Show.create!(name: 'Matilda the Musical', genre: gn2, description: d1, gig_image: File.open(File.join(Rails.root,"/public/images/Matilda.jpeg")))
 
-s1 = Show.create!(name: 'Matilda the Musical', genre: gn2, description: d1, gig_image: File.open(File.join(Rails.root,"/public/images/Matilda.jpeg")))
+Genre.delete_all
+Genre.create!(name: "Action")
+Genre.create!(name: "Adventure")
+Genre.create!(name: "Comedy")
+Genre.create!(name: "Crime")
+Genre.create!(name: "Fantasy")
+Genre.create!(name: "Historical")
+Genre.create!(name: "Historical Fiction")
+Genre.create!(name: "Horror")
+Genre.create!(name: "Magical Realism")
+Genre.create!(name: "Mystery")
+Genre.create!(name: "Paranoid")
+Genre.create!(name: "Philosophical")
+Genre.create!(name: "Political")
+Genre.create!(name: "Romance")
+Genre.create!(name: "Saga")
+Genre.create!(name: "Satire")
+Genre.create!(name: "Science Fiction")
+Genre.create!(name: "Slice of Life")
+Genre.create!(name: "Speculative")
+Genre.create!(name: "Thriller")
+Genre.create!(name: "Urban")
 
-
-
-
-
-
-
-
-
-
-
+Category.delete_all
+Category.create!(name: "Theatre")
+Category.create!(name: "Pantomine")
+Category.create!(name: "Live Music")
+Category.create!(name: "Stand Up")
+Category.create!(name: "Spoken Work")
+Category.create!(name: "Internet")
+Category.create!(name: "Magician")
+Category.create!(name: "Improv")
+Category.create!(name: "One Person")
