@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.delete_all
+Role.delete_all
 ['registered', 'banned', 'moderator', 'admin'].each do |role|
   Role.find_or_create_by({name: role})
 end
