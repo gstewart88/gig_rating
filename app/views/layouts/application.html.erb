@@ -11,18 +11,19 @@
   <p class="alert"><%= alert %></p>
 
   <div class='login'>
-    <% if current_user && if can? :manage, all%>
-      <%= current_user.email %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path %>
-      <%= link_to "Register", new_user_registration_path %>
-      or
-      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-    <% end %>
+  <% if current_user %>
+  <!-- && if can? :manage, all -->
+  <%= current_user.email %>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  <% else %>
+  <%= link_to "Sign In", new_user_session_path %>
+  <%= link_to "Register", new_user_registration_path %>
+  or
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+  <% end %>
   </div>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
