@@ -1,15 +1,15 @@
 class ShowReviewsController < ApplicationController
 
   def index
-    @show_reviews = Show_reviews.all
+    @show_reviews = Show_review.all
   end
 
   def new
-    @show_reviews = Show_reviews.new
+    @show_reviews = Show_review.new
   end
 
   def create
-    Show_reviews.create(show_review_params) 
+    Show_review.create(show_review_params) 
     redirect_to(show_reviews_path)
   end
 
