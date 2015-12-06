@@ -38,7 +38,7 @@ class ShowsController < ApplicationController
   end
 
   def show_params
-    params.require(:show).permit(:name, :date, :category_id)
+    params.require(:show).permit(:name, :date, :category_id, :venue_ids=>[])
   end
 
 
