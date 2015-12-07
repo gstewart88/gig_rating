@@ -3,4 +3,6 @@ class Show < ActiveRecord::Base
   has_many  :venues, :through => :performances
   
   belongs_to  :category
+
+  mount_uploader :show_img, ShowImgUploader
 end
