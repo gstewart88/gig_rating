@@ -1,0 +1,28 @@
+<%= form_for(@venue_review) do |f| %>
+<%= f.label :title, 'Review Title:' %>
+<%= f.text_field :title %><br />
+<%= f.label :author, 'Author:' %>
+<%= f.text_field :author %><br />
+<%= f.label :venue_id %>
+<%= f.select :venue_id, Venue.all.map { |c| [c.name, c.id] } %><br />
+<%= f.label :description, 'Description:' %>
+<%= f.text_field :description %><br />
+<%= f.label :accessibility %>
+<%= f.number_field :accessibility, min: 0, max: 5, step: 0.5 %><br />
+<%= f.label :acoustics %>
+<%= f.number_field :acoustics, min: 0, max: 5, step: 0.5 %><br />
+<%= f.label :cleanliness %>
+<%= f.number_field :cleanliness, min: 0, max: 5, step: 0.5 %><br />
+<%= f.label :lighting %>
+<%= f.number_field :lighting, min: 0, max: 5, step: 0.5 %><br />
+<%= f.label :location %>
+<%= f.number_field :location, min: 0, max: 5, step: 0.5 %><br />
+<%= f.label :parking %>
+<%= f.number_field :parking, min: 0, max: 5, step: 0.5 %><br />
+<%= f.label :seating %>
+<%= f.number_field :seating, min: 0, max: 5, step: 0.5 %><br />
+
+  <%= f.submit %>
+</div>
+
+<% end %>

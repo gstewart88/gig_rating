@@ -1,16 +1,26 @@
 class ShowReviewsController < ApplicationController
+  before_action :set_show_review, only: [:show, :edit, :update, :destroy]
 
   def index
     @show_reviews = ShowReview.all
   end
 
   def new
-    @show_reviews = ShowReview.new
+    @show_review = ShowReview.new
   end
 
   def create
-    ShowReview.create(show_review_params) 
-    redirect_to(show_reviews_path)
+    # Venue.create(venue_params) 
+    # redirect_to(venues_path)
+    @show_review = ShowReview.new(show_review_params)
+
+    respond_to do |format|
+      if @show_review.save
+        format.html { redirect_to @show_review, notice: 'Show Review was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
   end
 
   def show
