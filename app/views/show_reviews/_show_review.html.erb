@@ -1,3 +1,6 @@
-<div class="box">
 <%= show_review.title %>
-</div>
+<p>
+  <%= button_to('Show', show_review, method: :get) %>
+  <%= button_to('Edit', edit_show_review_path(show_review), method: :get)  %>
+  <%= button_to('Delete review', show_review_path(show_review), method: :delete) %>
+</p>
