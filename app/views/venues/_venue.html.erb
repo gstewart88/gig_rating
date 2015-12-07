@@ -8,9 +8,9 @@
     <p><%= image_tag venue.venue_img.medium.url %></p>
   
     <p>
-      <%= button_to('Venue', venue, method: :get)%>
-      <%= button_to('Edit', edit_venue_path(venue), method: :get) if can? :manage, Venue %>
-      <%= button_to('Delete venue', venue_path(venue), method: :delete, data:{confirm: 'Delete the venue? Are you sure?'}) if can? :delete, Venue %>
+      <%= button_to('Show', venue, method: :get)%>
+      <%= button_to('Edit', edit_venue_path(venue), method: :get) %>
+      <%= button_to('Delete venue', venue_path(venue), method: :delete) %>
     </p>
   </div>
 </div>
