@@ -1,0 +1,15 @@
+<%= form_for(@show) do |f| %>
+<%= f.label :name, 'Show Name:' %>
+<%= f.text_field :name %><br />
+<%= f.label :category_id %>
+<%= f.select :category_id, Category.all.map { |c| [c.name, c.id] } %><br />
+<%= f.label :date, 'Date:' %>
+<%= f.datetime_field :date %><br />
+<%= f.label :show_img, 'Show Image' %>
+<%= f.file_field :show_img %><br />
+</br>
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+<% end %>
