@@ -9,8 +9,17 @@ class VenueReviewsController < ApplicationController
   end
 
   def create
-    VenueReview.create(venue_review_params) 
-    redirect_to(venue_reviews_path)
+    # Venue.create(venue_params) 
+    # redirect_to(venues_path)
+    @venue = Venue.new(venue_params)
+
+    respond_to do |format|
+      if @venue.save
+        format.html { redirect_to @venue, notice: 'Venue was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
   end
 
   def show
