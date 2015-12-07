@@ -105,3 +105,10 @@ Show.create!(name: "We Will Rock You", show_img: File.open(File.join(Rails.root,
 Show.create!(name: "Wicked", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/Wicked.jpg")))
 
 
+User.delete_all
+
+User.create!(email: "simon@simon.com", password: "password", role_id: '3')
+User.create!(email: "greame@greame.com", password: "password", role_id: '1')
+User.create!(email: "syed@syed.com", password: "password", role_id: '1')
+
+
