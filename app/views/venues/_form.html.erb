@@ -1,0 +1,14 @@
+<%= form_for(@venue) do |f| %>
+<%= f.label :name, 'Venue Name:' %>
+<%= f.text_field :name %><br />
+<%= f.label :location, 'Location:' %>
+<%= f.text_field :location %><br />
+<%= f.label :venue_img, 'Venue Image' %>
+<%= f.file_field :venue_img %><br />
+</br>
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+<% end %>
+
