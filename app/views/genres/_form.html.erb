@@ -1,0 +1,13 @@
+<%= form_for(@genre) do |f| %>
+<%= f.label :name, 'Show Name:' %>
+<%= f.text_field :name %><br />
+<%= f.label "Live Music?" %>
+<%= f.check_box :live_music, {}, true, false %> <br />
+<%= f.label :genre_img, 'Show Image' %>
+<%= f.file_field :genre_img %><br />
+</br>
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+<% end %>
