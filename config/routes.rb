@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :venues
-  resources :shows do 
-    resources :performances
-  end
+  resources :shows
+  resources :performances
+ 
   resources :genres
   resources :categories
   resources :show_reviews
