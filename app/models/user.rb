@@ -1,10 +1,13 @@
 class User < ActiveRecord::Base
 
+  belongs_to  :role
+  has_many :show_reviews
+  has_many :venue_reviews
+
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable,
   :omniauthable, omniauth_providers: [:facebook]
 
-  belongs_to  :role
   before_create :set_default_role
 
 
