@@ -1,0 +1,13 @@
+<%= form_for(@venue_review) do |f| %>
+<%= f.label :title, 'Review Title:' %>
+<%= f.text_field :title %><br />
+<%= f.label :author, 'Author:' %>
+<%= f.text_field :author %><br />
+<%= f.label :show_id %>
+<%= f.select :show_id, Show.all.map { |c| [c.title, c.id] } %><br />
+<%= f.label :description, 'Description:' %>
+<%= f.text_field :description %><br />
+  <%= f.submit %>
+</div>
+
+<% end %>
