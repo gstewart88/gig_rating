@@ -11,7 +11,7 @@
     <p><%= image_tag show.show_img.medium.url %></p>
   
     <p>
-      <%= button_to('Show', shows_path, method: :get)%>
+      <%= button_to('Show', show, method: :get)%>
       <%= button_to('Edit', edit_show_path(show), method: :get) if can? :manage, Show %>
       <%= button_to('Delete show', show_path(show), method: :delete, data:{confirm: 'Delete the show? Are you sure?'}) if can? :delete, Show %>
     </p>
