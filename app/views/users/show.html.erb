@@ -1,1 +1,10 @@
 <%= link_to "Edit Profile", edit_user_registration_path %>
+<br>
+<br>
+<%= current_user.username %>
+<br>
+<%= current_user.name %>
+<br>
+<%= current_user.email %>
+<br>
+<%= current_user.try(:location) %>
