@@ -87,6 +87,7 @@ Category.create!(name: "Internet")
 Category.create!(name: "Magician")
 Category.create!(name: "Improv")
 Category.create!(name: "One Person")
+Category.create!(name: "Ballet")
 
 
 
