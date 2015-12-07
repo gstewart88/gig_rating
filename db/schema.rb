@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204175940) do
+ActiveRecord::Schema.define(version: 20151207113439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "genre_id"
+    t.string   "category_img"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 20151204175940) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean  "live_music"
+    t.string   "genre_img"
   end
 
   create_table "performances", force: :cascade do |t|
@@ -61,6 +63,7 @@ ActiveRecord::Schema.define(version: 20151204175940) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
+    t.string   "show_img"
   end
 
   create_table "users", force: :cascade do |t|
@@ -104,6 +107,7 @@ ActiveRecord::Schema.define(version: 20151204175940) do
     t.text     "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "venue_img"
   end
 
 end
