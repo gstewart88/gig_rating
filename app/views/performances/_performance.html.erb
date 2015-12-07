@@ -1,7 +1,6 @@
-
 <div >
   <div>
-  <p><strong>Show Name:</strong><%= performance.gig.try(:name) %></p>
+  <p><strong>Show Name:</strong><%= performance.show.try(:name) %></p>
   <p><strong>Venue Name: </strong> <%= performance.venue.try(:name) %></p>
   <p><strong>Schedule: </strong><%= performance.human_readable_date %></p>
   
