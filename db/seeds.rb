@@ -14,9 +14,12 @@ end
 
 
 Venue.delete_all
-Venue.create!(name: 'Glasgow Theatre Royal', location: 'Glasgow, Bath Street')
-Venue.create!(name: 'Manchester Theatre Royal', location: 'Manchester, Rigg Street')
-Venue.create!(name: 'Edinburgh Theatre Royal', location: 'Edinburgh, Mayor Street')
+Venue.create!(name: 'Glasgow Theatre Royal', location: 'Glasgow', venue_img: File.open(File.join(Rails.root,"/public/WeView/GlasgowTheatres/Royal.jpg")))
+Venue.create!(name: 'Exhibition & Conference Theatre', location: 'Glasgow', venue_img: File.open(File.join(Rails.root,"/public/WeView/GlasgowTheatres/ExhibitionConference.jpg")))
+Venue.create!(name: 'Festival Theatre', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Festival-Outside.JPG")))
+Venue.create!(name: 'The Lyceum', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Lyceum.jpg")))
+Venue.create!(name: 'Edinburgh Playhouse', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Playhouse.jpg")))
+Venue.create!(name: 'Edinburgh Traverse Theatre', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Traverse.jpg")))
 
 # Show.delete_all
 # Show.create!(name: 'Matilda the Musical', genre: gn2, description: d1, gig_image: File.open(File.join(Rails.root,"/public/images/Matilda.jpeg")))
@@ -100,4 +103,5 @@ Show.create!(name: "The Phantom of The Opera", show_img: File.open(File.join(Rai
 Show.create!(name: "The Wizard of Oz", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/TheWizardofOz.jpg")))
 Show.create!(name: "We Will Rock You", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/WeWillRockYou.jpg")))
 Show.create!(name: "Wicked", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/Wicked.jpg")))
+
 

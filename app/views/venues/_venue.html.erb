@@ -1,1 +1,16 @@
-<%= venue.name %>
+<!-- <div style="transform: skewX(-15deg); transform: translate(5px,5px)" class="container avatarBox .text_center"> -->
+<div>
+
+  <div>
+
+    <p><strong>Venue Name: </strong><%= venue.name%></p>
+    
+    <p><%= image_tag venue.venue_img.medium.url %></p>
+  
+    <p>
+      <%= button_to('Venue', venue, method: :get)%>
+      <%= button_to('Edit', edit_venue_path(venue), method: :get) if can? :manage, Venue %>
+      <%= button_to('Delete venue', venue_path(venue), method: :delete, data:{confirm: 'Delete the venue? Are you sure?'}) if can? :delete, Venue %>
+    </p>
+  </div>
+</div>
