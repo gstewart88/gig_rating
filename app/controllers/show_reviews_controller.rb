@@ -1,15 +1,15 @@
 class ShowReviewsController < ApplicationController
 
   def index
-    @show_reviews = Show_review.all
+    @show_reviews = ShowReview.all
   end
 
   def new
-    @show_reviews = Show_review.new
+    @show_reviews = ShowReview.new
   end
 
   def create
-    Show_review.create(show_review_params) 
+    ShowReview.create(show_review_params) 
     redirect_to(show_reviews_path)
   end
 
@@ -33,7 +33,7 @@ class ShowReviewsController < ApplicationController
   private
 
   def set_show_review
-    @show_review = Show_review.find(params[:id])
+    @show_review = ShowReview.find(params[:id])
   end
 
   def show_review_params
