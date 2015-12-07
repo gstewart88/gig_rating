@@ -5,7 +5,7 @@ class VenuesController < ApplicationController
   # before_action :authenticate_user!
   
   def index
-    @venues = Venue.all
+    @venues = Venue.all.order(:name)
   end
 
   def new

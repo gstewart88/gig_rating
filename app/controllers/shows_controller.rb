@@ -5,7 +5,7 @@ class ShowsController < ApplicationController
   # before_action :authenticate_user!
   
   def index
-    @shows = Show.all
+    @shows = Show.all.order(:name)
   end
 
   def new
