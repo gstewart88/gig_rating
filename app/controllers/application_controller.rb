@@ -3,10 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   #If the user authorization fails, a CanCan::AccessDenied exception will be raised.
+  
   rescue_from CanCan::AccessDenied do |exception|
-    respond_to do |format|
-      format.json { render nothing: true, status: :forbidden }
-      format.html { redirect_to main_app.root_url, :alert => exception.message }
-    end
+   redirect_to root_path, alert: "You can't access this page"
   end
+
 end
