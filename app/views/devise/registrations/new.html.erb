@@ -1,29 +1,51 @@
-<h2>Sign up</h2>
+<div class="sign_up_head">
+  <h2>Sign up to WeView</h2>
+</div>
+<br>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
+    <div class="form-col-left">
+      <%= f.label :name, "Name: " %>
+    </div>
+    <div class="form-col-right">
+      <%= f.text_field :name, autofocus: true %>
+    </div>
+    <br>
+    <br>
+    <div class="form-col-left">
+      <%= f.label :username, "Username: " %>
+    </div>
+    <div class="form-col-right">
+      <%= f.text_field :username %>
+    </div>
+    <br>
+    <br>
+    <div class="form-col-left">
+      <%= f.label :email, "Email: " %>
+    </div>
+    <div class="form-col-right">
+      <%= f.email_field :email %>
+    </div>
+    <br>
+    <br>
+    <div class="password_inputs">
+    <%= f.label :password, "Password & Confirmation" %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    </div>
+    <br>
+    <div class="form-col-left">
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div class="form-col-right">
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+    <br>
+    <br>
+    <div class="sign_up_links">
+    <%= f.submit "Sign me up!" %><%= render "devise/shared/links" %>
+    </div>
 <% end %>
 
-<%= render "devise/shared/links" %>

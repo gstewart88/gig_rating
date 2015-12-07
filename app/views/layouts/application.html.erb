@@ -7,33 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Venues", venues_path %></li>
-      <li><%= link_to "Shows", shows_path %></li>
-      <li><%= link_to "Genres", genres_path %></li>
-      <li><%= link_to "Categories", categories_path %></li>
-      <li><%= link_to "Show Reviews", show_reviews_path %></li>
-      <li><%= link_to "Venue Reviews", venue_reviews_path %></li>
-    </ul>
-  </nav>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Venues", venues_path %></li>
+        <li><%= link_to "Shows", shows_path %></li>
+        <li><%= link_to "Genres", genres_path %></li>
+        <li><%= link_to "Categories", categories_path %></li>
+        <li><%= link_to "Show Reviews", show_reviews_path %></li>
+        <li><%= link_to "Venue Reviews", venue_reviews_path %></li>
+        <% if user_signed_in? %>
+        <li><%= link_to "Profile", user_path(current_user) %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Register", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <div class='login'>
     <%# if current_user && if can? :manage, :all %>
-    <% if current_user%>
-      <%= current_user.email %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path %>
-      <%= link_to "Register", new_user_registration_path %>
-      or
-      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-    <% end %>
+    <%#= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
   </div>
 
   <%= yield %>
-
+</div>
 </body>
 </html>

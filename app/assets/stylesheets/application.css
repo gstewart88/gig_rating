@@ -1,3 +1,9 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .box {
   display: inline-block;
   margin-right: -4px;
@@ -48,21 +54,60 @@
 }
 
 .col-middle {
-
 }
 
 .col-right {
   
 }
 
+.form-col-left {
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+    width: 49%;
+    text-align: right;
+    padding-right: 2%;
+}
 
+.form-col-right {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  width: 49%;
+}
 
+body {
+  font-family: Arial, Helvetica;
+}
 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
 
+li {
+  display: inline;
+}
 
+.sign_up_head {
+  margin: 0 auto;
+  width: 215px;
+}
 
+.password_inputs {
+  margin: 0 auto;
+  width: 353px;
+}
 
+.sign_up_links {
+  margin: 0 auto;
+  width: 157px;
+}
 
+nav {
+  margin: 0 auto;
+  width: 640px;
+}
 
 
 
