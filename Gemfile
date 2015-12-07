@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+gem 'cancancan'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -38,12 +44,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'better_errors'
-  gem 'devise'
-  gem 'cancancan'
-  gem 'carrierwave'
-  gem 'rmagick'
-  gem 'omniauth'
-  gem 'omniauth-facebook'
 end
 
 group :development do
