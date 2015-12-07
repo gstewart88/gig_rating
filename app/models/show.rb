@@ -4,5 +4,5 @@ class Show < ActiveRecord::Base
   
   belongs_to  :category
 
-  mount_uploader :show_img, ShowImgUploader
+  # mount_uploader :show_img, ShowImgUploader
 end
