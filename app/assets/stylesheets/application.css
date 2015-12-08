@@ -27,6 +27,16 @@
     background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
 }
 
+/*To see Nav bar before it becomes dropdown menu*/
+
+a {
+  color: white;
+  text-shadow: 1px 1px black;
+  text-decoration: none;
+}
+
+/*Remove the last 8 lines when drop down menu is made*/
+
 .container {
   width: 1080px;
   margin: 0 auto;
@@ -231,7 +241,7 @@ nav {
   font-size: 15px;
   text-decoration: none;
   color: black;
-
+  text-shadow: none;
   background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 30px;
@@ -245,10 +255,10 @@ nav {
   font-size: 15px;
   text-decoration: none;
   color: black;
-
+  text-shadow: none;
   background-color: rgba(255, 255, 255, 0.75);
 
-  padding: 15px 25px;
+  padding: 15px 34px;
 }
 
 .s1_what_button:hover {
@@ -279,7 +289,7 @@ nav {
   font-size: 15px;
   text-decoration: none;
   color: black;
-
+  text-shadow: none;
   background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 60px;
@@ -293,7 +303,7 @@ nav {
   font-size: 15px;
   text-decoration: none;
   color: black;
-
+  text-shadow: none;
   background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 70.5px;
@@ -327,7 +337,7 @@ nav {
   font-size: 15px;
   text-decoration: none;
   color: black;
-
+  text-shadow: none;
   background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 60px;
@@ -349,7 +359,7 @@ nav {
   font-size: 15px;
   text-decoration: none;
   color: black;
-
+  text-shadow: none;
   background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 60px;
