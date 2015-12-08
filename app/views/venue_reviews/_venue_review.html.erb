@@ -1,8 +1,11 @@
-<%= venue_review.title %> </br>
-<%= venue_review.venue.name %> </br>
-<%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %>
-<p>
-  <%= button_to('Show', venue_review, method: :get) %>
-  <%= button_to('Edit', edit_venue_review_path(venue_review), method: :get)  %>
-  <%= button_to('Delete', venue_review_path(venue_review), method: :delete) %>
-</p>
+<p><%= venue_review.title %></p>
+<p><%= venue_review.venue.name %></p>
+<p><%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %></p>
+
+<div class="menu">
+  <ul>
+    <li><%= link_to('Show', venue_review, method: :get) %></li>
+    <li><%= link_to( 'Edit', edit_venue_review_path(venue_review), method: :get) %></li>
+    <li><%= link_to('Delete', venue_review_path(venue_review), method: :delete) %></li>
+  </ul>
+</div>
