@@ -1,12 +1,6 @@
 <p><%= show_review.show.try(:name) %></p>
 <p><%= show_review.title %></p>
 
- 
-  <%= button_to('Edit', edit_show_review_path(show_review), method: :get)  %>
-  <%= button_to('Delete review', show_review_path(show_review), method: :delete) %>
-  <li></li>
-  <li></li>
-</p>
 
 <p><%= "★"*show_review.rating %><%= "☆"*(5 - show_review.rating) %></p>
 
