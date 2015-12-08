@@ -14,7 +14,7 @@
 
   <div class="menu">
     <ul>
-    <li><strong><%= link_to 'Edit', edit_venue_review_path(@venue_review) %></strong></li>
+    <li><strong><%= link_to 'Edit', edit_venue_review_path(@venue_review) if can? :update, VenueReview %></strong></li>
     <li><strong><%= link_to 'Back', venue_reviews_path %></strong></li>
     </ul>
 

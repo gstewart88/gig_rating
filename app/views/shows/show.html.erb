@@ -8,7 +8,7 @@
 
   <div class="menu">
     <ul>
-    <li><strong><%= link_to 'Edit', edit_show_path(@show) if can? :manage, Show  %></strong></li>
+    <li><strong><%= link_to 'Edit', edit_show_path(@show) if can? :update, Show  %></strong></li>
     <li><strong><%= link_to 'Back', shows_path %></strong></li>
     </ul>
 

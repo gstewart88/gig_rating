@@ -2,6 +2,6 @@
 
 <div>
   <%#= link_to 'Add New Venue', new_venue_path if can? :manage, Venue %>
-  <strong><%= link_to "New Venue", new_venue_path %></strong>
+  <strong><%= link_to "New Venue", new_venue_path if can? :create, Venue %></strong>
 </div>
 <%= render @venues %>

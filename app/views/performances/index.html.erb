@@ -1,7 +1,7 @@
 <%#= link_to "New performance", new_performance_path %>
 
 <div>
-  <%= link_to 'New Performance', new_performance_path if can? :manage, Performance%>
+  <%= link_to 'New Performance', new_performance_path if can? :create, Performance%>
 </div>
 
   <%= render @performances %>

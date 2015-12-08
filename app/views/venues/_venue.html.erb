@@ -9,8 +9,8 @@
   
     <p>
       <%= button_to('Show', venue, method: :get)%>
-      <%= button_to('Edit', edit_venue_path(venue), method: :get) %>
-      <%= button_to('Delete venue', venue_path(venue), method: :delete) %>
+      <%= button_to('Edit', edit_venue_path(venue), method: :get ) if can? :manage, Venue %>
+      <%= button_to('Delete venue', venue_path(venue), method: :delete, data:{confirm: 'Delete the schedule? Are you sure?'}) if can? :delete, Venue %>
     </p>
   </div>
 </div>

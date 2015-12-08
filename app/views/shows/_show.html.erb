@@ -12,8 +12,10 @@
   
     <p>
       <%= button_to('Show', show, method: :get)%>
-      <%= button_to('Edit', edit_show_path(show), method: :get) %>
-      <%= button_to('Delete', show_path(show), method: :delete) %>
+      <%#= button_to('Edit', edit_show_path(show), method: :get) %>
+      <%#= button_to('Delete', show_path(show), method: :delete) %>
+      <li><%= button_to('Edit', edit_show_path(show), method: :get) if can? :manage, Show %></li>
+      <li><%= button_to('Delete', show_path(show), method: :delete, data:{confirm: 'Delete the show? Are you sure?'}) if can? :delete, Show %></li>
     </p>
   </div>
 </div>

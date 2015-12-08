@@ -1,7 +1,7 @@
 
 Role.delete_all
 ['registered', 'banned', 'moderator', 'admin'].each do |role|
-  Role.find_or_create_by({name: role})
+  Role.create!(name: role)
 end
 
 Genre.delete_all
@@ -116,8 +116,8 @@ Performance.create!(show: s9, venue: v3, date: (DateTime.new(2015,12,22,17,00)))
 
 User.delete_all
 
-User.create!(email: "simon@simon.com", password: "password", role_id: '3')
-User.create!(email: "graeme@graeme.com", password: "password", role_id: '1')
-User.create!(email: "syed@syed.com", password: "password", role_id: '1')
+User.create!(email: "simon@simon.com", password: "password", role: Role.find_by(name: 'admin'))
+User.create!(email: "graeme@graeme.com", password: "password")
+User.create!(email: "syed@syed.com", password: "password")
 
 
