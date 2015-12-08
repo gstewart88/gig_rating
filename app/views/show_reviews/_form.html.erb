@@ -3,7 +3,7 @@
 <%= f.text_field :title %><br />
 <%= f.label :show_id %>
 <%= f.select :show_id, Show.all.map { |c| [c.name, c.id] } %><br />
-<%= f.label :description, 'Description:' %>
+<%= f.label :description, 'Review:' %>
 <%= f.text_field :description %><br />
 <%= f.label :rating %>
 <%= f.number_field :rating, min: 0, max: 5, step: 1 %>
