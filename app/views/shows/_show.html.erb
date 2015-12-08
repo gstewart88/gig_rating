@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<div>
+    <strong>Show Name: </strong><%= show.name%>
+    <strong>Category: </strong> <%= show.category.try :name %>
+    <%= image_tag show.show_img.medium.url, class: "thumbnail" %>
+    <%= button_to('Show', show, method: :get)%>
+    <%= button_to('Edit', edit_show_path(show), method: :get) %>
+    <%= button_to('Delete', show_path(show), method: :delete) %>
+=======
 
 <div>
 
@@ -15,4 +24,5 @@
       <li><%= button_to('Delete', show_path(show), method: :delete, data:{confirm: 'Delete the show? Are you sure?'}) if can? :delete, Show %></li>
     </p>
   </div>
+>>>>>>> 33da8926b560b4e60a773134d5c6918f6c6e6a32
 </div>
