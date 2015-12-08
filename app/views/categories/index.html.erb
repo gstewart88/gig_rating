@@ -1,11 +1,9 @@
 <img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
 <br>
 
-<p id="notice"><%= notice %></p>
-
-
 <%= render @categories %>
-
+<br>
+<br>
 <div class="new_category_center">
   <%= link_to("New Category", new_category_path, class: "new_category_button") if can? :create, Category %>
 </div>

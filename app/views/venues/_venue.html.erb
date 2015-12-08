@@ -1,7 +1,7 @@
-<div class="box box-4">
-  <p class="thumbnail-label"><%= venue.name %></p>
-  <%= image_tag venue.venue_img.gridlist.url, class: "thumbnail" %>
-  <%= button_to('Show', venue, method: :get, class: "thumbnail-buttons")%>
-  <%= button_to('Edit', edit_venue_path(venue), method: :get, class: "thumbnail-buttons") if can? :manage, Venue %>
-  <%= button_to('Delete', venue_path(venue), method: :delete, data:{confirm: 'Delete the schedule? Are you sure?'}, class: "thumbnail-buttons") if can? :delete, Venue %>
+<div class="box box-4 thumbnail">
+  <div class="thumbnail-label"><%= venue.name %></div>
+  <%= image_tag venue.venue_img.gridlist.url %>
+  <%= button_to('Show', venue, method: :get, class: "thumbnail-buttons form-1")%>
+  <%= button_to('Edit', edit_venue_path(venue), method: :get, class: "thumbnail-buttons form-2") if can? :manage, Venue %>
+  <%= button_to('Delete', venue_path(venue), method: :delete, data:{confirm: 'Delete the schedule? Are you sure?'}, class: "thumbnail-buttons form-3") if can? :delete, Venue %>
 </div>

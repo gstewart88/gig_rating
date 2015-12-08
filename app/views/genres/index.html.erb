@@ -2,7 +2,8 @@
 <br>
 
 <%= render @genres %>
-
+<br>
+<br>
 <div class="new_category_center">
   <%= link_to("New Genre", new_genre_path, class: "new_genre_button") if can? :create, Genre%>
 </div>

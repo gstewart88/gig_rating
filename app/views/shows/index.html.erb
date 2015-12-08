@@ -3,6 +3,7 @@
 
 <%= render @shows %>
 <br>
+<br>
 <div class="new_show_center">
   <%= link_to("New Show", new_show_path, class: "new_show_button") if can? :create, Show %>
 </div>
