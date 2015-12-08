@@ -13,7 +13,7 @@ class ShowReviewsController < ApplicationController
     # Venue.create(venue_params) 
     # redirect_to(venues_path)
     @show_review = ShowReview.new(show_review_params)
-    @venue_review.user = current_user
+    @show_review.user = current_user
 
     respond_to do |format|
       if @show_review.save
