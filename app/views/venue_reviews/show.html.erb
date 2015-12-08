@@ -1,16 +1,15 @@
 <div>
-  <p><strong><%= @venue_review.title %></strong></p>
-  <p>Where: <%= @venue_review.venue.name %></p>
-  <p>Description: <%= @venue_review.description %></p>
-  <p>Accessibility: <%= "★"*@venue_review.accessibility %><%= "☆"*(5 - @venue_review.accessibility) %></p>
-  <p>Acoustics: <%= "★"*@venue_review.acoustics %><%= "☆"*(5 - @venue_review.acoustics) %></p>
-  <p>Cleanliness: <%= "★"*@venue_review.cleanliness %><%= "☆"*(5 - @venue_review.cleanliness) %></p>
-  <p>Lighting: <%= "★"*@venue_review.lighting %><%= "☆"*(5 - @venue_review.lighting) %></p>
-  <p>Location: <%= "★"*@venue_review.location %><%= "☆"*(5 - @venue_review.location) %></p>
-  <p>Parking: <%= "★"*@venue_review.parking %><%= "☆"*(5 - @venue_review.parking) %></p>
-  <p>Seating: <%= "★"*@venue_review.seating %><%= "☆"*(5 - @venue_review.seating) %></p></br>
-  <p>Average Rating: <%= "★"*@venue_review.average_rating %><%= "☆"*(5 - @venue_review.average_rating) %></p>
-
+  <p><strong>Review Title: </strong><%= @venue_review.title %></p>
+  <p><strong>Venue: </strong> <%= @venue_review.venue.name %></p>
+  <p><strong>Description: </strong><%= @venue_review.description %></p>
+  <p><strong>Accessibility: </strong><%= "★"*@venue_review.accessibility %><%= "☆"*(5 - @venue_review.accessibility) %></p>
+  <p><strong>Acoustics: </strong><%= "★"*@venue_review.acoustics %><%= "☆"*(5 - @venue_review.acoustics) %></p>
+  <p><strong>Cleanliness: </strong><%= "★"*@venue_review.cleanliness %><%= "☆"*(5 - @venue_review.cleanliness) %></p>
+  <p><strong>Lighting: </strong><%= "★"*@venue_review.lighting %><%= "☆"*(5 - @venue_review.lighting) %></p>
+  <p><strong>Location: </strong><%= "★"*@venue_review.location %><%= "☆"*(5 - @venue_review.location) %></p>
+  <p><strong>Parking: </strong><%= "★"*@venue_review.parking %><%= "☆"*(5 - @venue_review.parking) %></p>
+  <p><strong>Seating: </strong><%= "★"*@venue_review.seating %><%= "☆"*(5 - @venue_review.seating) %></p>
+  <p><strong>Average Rating: </strong><%= "★"*@venue_review.average_rating %><%= "☆"*(5 - @venue_review.average_rating) %></p>
 
   <div class="menu">
     <ul>

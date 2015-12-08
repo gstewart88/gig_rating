@@ -1,7 +1,7 @@
 class PerformancesController < ApplicationController
 
   load_and_authorize_resource
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   load_and_authorize_resource
   before_action :set_performance, only: [:show, :edit, :update, :destroy]
