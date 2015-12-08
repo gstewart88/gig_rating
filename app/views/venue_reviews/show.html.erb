@@ -1,7 +1,13 @@
 <div>
   <p><strong>Review Title: </strong><%= @venue_review.title %></p>
   <p><strong>Venue: </strong> <%= @venue_review.venue.name %></p>
-  <p><strong>Description: </strong><%= @venue_review.description %></p>
+
+  <% if user_signed_in? %>
+    <p><strong>Review: </strong><%= @venue_review.description %></p>
+  <% else %>
+    <p><strong>Review: </strong><%= "#{@venue_review.description[0...5]}..."  %></p>
+  <% end %>
+
   <p><strong>Accessibility: </strong><%= "★"*@venue_review.accessibility %><%= "☆"*(5 - @venue_review.accessibility) %></p>
   <p><strong>Acoustics: </strong><%= "★"*@venue_review.acoustics %><%= "☆"*(5 - @venue_review.acoustics) %></p>
   <p><strong>Cleanliness: </strong><%= "★"*@venue_review.cleanliness %><%= "☆"*(5 - @venue_review.cleanliness) %></p>
