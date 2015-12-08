@@ -11,7 +11,7 @@
 
   <div>
       <li><strong><%= link_to 'Back', performances_path %></strong></li>
-      <li><strong><%= link_to 'Edit', edit_performance_path(@performance) %></strong></li>
+      <li><strong><%= link_to 'Edit', edit_performance_path(@performance) if can? :update, Performance%></strong></li>
   </div>
 
 </div>

@@ -2,11 +2,11 @@
 
 <div> <h1>Listing Shows</h1> </div>
 
-<%= link_to 'Add New Show', new_show_path %>
+<%= link_to 'Add New Show', new_show_path if can? :create, Show %>
 
 <div>
   <%#= link_to 'Add New Show', new_show_path if can? :manage, Show %>
 </div>
 <%= render @shows %>
 <br>
-<%= link_to "New Show", new_show_path %>
+<%= link_to "New Show", new_show_path if can? :create, Venue %>

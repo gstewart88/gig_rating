@@ -1,10 +1,19 @@
-<div class="box">
-<p><%= show_review.show.name %></p>
+<p><%= show_review.show.try(:name) %></p>
 <p><%= show_review.title %></p>
-<%= "★"*show_review.rating %><%= "☆"*(5 - show_review.rating) %>
-<p>
-  <%= button_to('Show', show_review, method: :get) %>
+
+ 
   <%= button_to('Edit', edit_show_review_path(show_review), method: :get)  %>
   <%= button_to('Delete review', show_review_path(show_review), method: :delete) %>
+  <li></li>
+  <li></li>
 </p>
+
+<p><%= "★"*show_review.rating %><%= "☆"*(5 - show_review.rating) %></p>
+
+<div class="menu">
+  <ul>
+    <li><%= link_to('Show', show_review, method: :get) %></li>
+    <li><%= button_to('Edit', edit_show_review_path(show_review), method: :get) if can? :manage, ShowReview %></li>
+    <li><%= button_to('Delete', show_review_path(show_review), method: :delete, data:{confirm: 'Delete the show_review? Are you sure?'}) if can? :delete, ShowReview %></li>
+  </ul>
 </div>

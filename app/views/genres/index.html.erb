@@ -2,4 +2,4 @@
 <%= render @genres %>
 <br>
 
-<%= link_to "New Genre", new_genre_path %>
+<%= link_to "New Genre", new_genre_path if can? :create, Genre%>
