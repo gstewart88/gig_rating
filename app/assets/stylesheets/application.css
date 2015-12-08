@@ -1,3 +1,21 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
 .rating {
     overflow: hidden;
     display: inline-block;
@@ -374,6 +392,45 @@ nav {
   width: 198px;
 }
 
+.new_category_button {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  text-shadow: none;
+  background-color: rgba(255, 255, 255, 0.75);
+
+  padding: 15px 60px;
+}
+
+.new_category_button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.new_category_center {
+  margin: 0 auto;
+  width: 216px;
+}
+
+.new_genre_button {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  text-shadow: none;
+  background-color: rgba(255, 255, 255, 0.75);
+
+  padding: 15px 60px;
+}
+
+.new_genre_button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.new_genre_center {
+  margin: 0 auto;
+  width: 196px;
+}
+
+
 
 
 
@@ -387,6 +444,23 @@ nav {
   width: auto;
   top: 125px;
   padding: 10px;
+}
+
+.thumbnail-buttons {
+  background-color: rgba(192,192,192,0.5);
+  color: rgba(0,0,0,0.75);
+  border: none;
+  margin-right: -5px;
+}
+
+.button_to {
+  display: inline-block;
+  position: relative;
+  bottom: 23px;
+}
+
+.thumbnail-buttons:hover {
+  background-color: rgba(192,192,192,0.75);
 }
 
 
@@ -411,18 +485,4 @@ nav {
 
 
 
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+

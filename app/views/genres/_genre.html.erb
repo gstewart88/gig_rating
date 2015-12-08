@@ -1,8 +1,7 @@
-
-<div class="box">
-<%= genre.name %>
-<%= link_to("Show", genre_path(genre)) %>
-<%= button_to('Edit', edit_genre_path(genre), method: :get) if can? :manage, Genre %>
-<%= button_to('Delete', genre_path(genre), method: :delete, data:{confirm: 'Delete the genre? Are you sure?'}) if can? :delete, Genre %>
+<div class="box box-4">
+  <p class="thumbnail-label"><%= genre.name %></p>
+  <img src="https://reddingtalent.files.wordpress.com/2011/06/tragedycomedy.jpg" style="width:360px;height:203px;">
+  <%= button_to("Show", genre_path(genre), class: "thumbnail-buttons") %>
+  <%= button_to('Edit', edit_genre_path(genre), method: :get, class: "thumbnail-buttons") if can? :manage, Genre %>
+  <%= button_to('Delete', genre_path(genre), method: :delete, data:{confirm: 'Delete the genre? Are you sure?'}, class: "thumbnail-buttons") if can? :delete, Genre %>
 </div>
-<br>

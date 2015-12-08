@@ -1,7 +1,7 @@
-<div class="box">
-<%= category.name %>
-<%= link_to("Show", category_path(category)) %>
-<%= button_to('Edit', edit_category_path(category), method: :get) if can? :manage, Category %>
-<%= button_to('Delete', category_path(category), method: :delete, data:{confirm: 'Delete the category? Are you sure?'}) if can? :delete, Category %>
+<div class="box box-4">
+  <p class="thumbnail-label"><%= category.name %></p>
+  <img src="https://reddingtalent.files.wordpress.com/2011/06/tragedycomedy.jpg" style="width:360px;height:203px;">
+  <%= button_to("Show", category_path(category), class: "thumbnail-buttons") %>
+  <%= button_to('Edit', edit_category_path(category), method: :get, class: "thumbnail-buttons") if can? :manage, Category %>
+  <%= button_to('Delete', category_path(category), method: :delete, data:{confirm: 'Delete the category? Are you sure?'}, class: "thumbnail-buttons") if can? :delete, Category %>
 </div>
-<br>

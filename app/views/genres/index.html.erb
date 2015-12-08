@@ -1,5 +1,8 @@
-
-<%= render @genres %>
+<img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
 <br>
 
-<%= link_to "New Genre", new_genre_path if can? :create, Genre%>
+<%= render @genres %>
+
+<div class="new_category_center">
+  <%= link_to("New Genre", new_genre_path, class: "new_genre_button") if can? :create, Genre%>
+</div>
