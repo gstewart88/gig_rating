@@ -1,6 +1,6 @@
 <div>
     <%= form_tag(performances_path, method: "get") do %>
-    <%= text_field_tag(:name) %>
+    <%= text_field_tag(:name, nil, :placeholder=>'Shows And Venues') %>
     <%= submit_tag("Search Shows And Venues") %>
     <% end %>
 </div>
