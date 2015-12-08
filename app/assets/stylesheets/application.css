@@ -80,6 +80,31 @@ body {
   font-family: Arial, Helvetica;
 }
 
+img.bg {
+
+  /*-webkit-filter: blur(10px);*/
+
+  filter: blur(5px);
+  /*Browser Specific*/
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  
+  min-height: 105%;
+  min-width: 105%;
+
+  width: 100%;
+  height: auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -2;
+
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -121,7 +146,20 @@ nav {
   width: 100px;
 }
 
+.first_buttons {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
 
+  background: white;
+  opacity: 0.75;
+
+  padding: 10px 20px;
+}
+
+.first_buttons:hover {
+  opacity: 1;
+}
 
 
 

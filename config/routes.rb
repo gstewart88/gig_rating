@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :users, only: :show
   root to: "home#index"
 
+  resources :venue_or_shows
+
   resources :venues
   resources :shows
   resources :performances
