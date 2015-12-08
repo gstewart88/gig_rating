@@ -3,7 +3,7 @@
 
   <p><%= link_to image_tag(@venue.venue_img.medium.url) %></p>
 
-  <p><strong>Location: </strong><%= @venue.location.try(:name) %></p>
+  <p><strong>Location: </strong><%= @venue.location %></p>
 
   <div class="menu">
     <ul>
