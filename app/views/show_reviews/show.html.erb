@@ -1,7 +1,7 @@
 <div>
 <p><%= @show_review.show.name %></p>
   <p><%= "★"*@show_review.rating %><%= "☆"*(5 - @show_review.rating) %><strong><%= @show_review.title %></strong></p>
-  <p>By <%= @show_review.user.name %> on <%= (@show_review.created_at).strftime("%d %B %Y") %></p>
+  <p>By <%= @show_review.user.email %> on <%= (@show_review.created_at).strftime("%d %B %Y") %></p>
   <p><%= @show_review.description %></p>
 
   <div class="menu">
