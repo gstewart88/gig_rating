@@ -147,22 +147,35 @@ nav {
 }
 
 .first_buttons {
-  font-size: 20px;
+  font-size: 15px;
   text-decoration: none;
   color: black;
 
   background: white;
   opacity: 0.75;
 
-  padding: 10px 20px;
+  padding: 15px 25px;
 }
 
 .first_buttons:hover {
   opacity: 1;
 }
 
+.first_buttons_left {
+  position: fixed;
+  top: 300px;
+  left: 40%;
+  margin-right: -4px;
+  vertical-align: top;
+}
 
-
+.first_buttons_right {
+  position: fixed;
+  top: 300px;
+  right: 40%;
+  margin-right: -4px;
+  vertical-align: top;
+}
 
 
 
