@@ -1,16 +1,7 @@
-<!-- <div style="transform: skewX(-15deg); transform: translate(5px,5px)" class="container avatarBox .text_center"> -->
-<div>
-
-  <div>
-
-    <p><strong>Venue Name: </strong><%= venue.name%></p>
-    
-    <p><%= image_tag venue.venue_img.medium.url %></p>
-  
-    <p>
-      <%= button_to('Show', venue, method: :get)%>
-      <%= button_to('Edit', edit_venue_path(venue), method: :get) %>
-      <%= button_to('Delete venue', venue_path(venue), method: :delete) %>
-    </p>
-  </div>
+<div class="box box-4">
+  <%= venue.name %>
+  <%= image_tag venue.venue_img.gridlist.url, class: "thumbnail" %>
+  <%= button_to('Show', venue, method: :get)%>
+  <%= button_to('Edit', edit_venue_path(venue), method: :get) %>
+  <%= button_to('Delete venue', venue_path(venue), method: :delete) %>
 </div>

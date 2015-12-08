@@ -11,6 +11,10 @@ class ShowImgUploader < CarrierWave::Uploader::Base
       process :resize_to_fit => [350, 350]
     end
 
+    version :gridlist do
+      process :resize_to_fill => [360, 203]
+    end
+
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick

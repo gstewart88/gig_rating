@@ -1,19 +1,8 @@
-
-<!-- <div style="transform: skewX(-15deg); transform: translate(5px,5px)" class="container avatarBox .text_center"> -->
 <div>
-
-  <div>
-
-    <p><strong>Show Name: </strong><%= show.name%></p>
-
-    <p><strong>Category: </strong> <%= show.category.try :name %></p>
-    
-    <p><%= image_tag show.show_img.medium.url %></p>
-  
-    <p>
-      <%= button_to('Show', show, method: :get)%>
-      <%= button_to('Edit', edit_show_path(show), method: :get) %>
-      <%= button_to('Delete', show_path(show), method: :delete) %>
-    </p>
-  </div>
+    <strong>Show Name: </strong><%= show.name%>
+    <strong>Category: </strong> <%= show.category.try :name %>
+    <%= image_tag show.show_img.medium.url, class: "thumbnail" %>
+    <%= button_to('Show', show, method: :get)%>
+    <%= button_to('Edit', edit_show_path(show), method: :get) %>
+    <%= button_to('Delete', show_path(show), method: :delete) %>
 </div>

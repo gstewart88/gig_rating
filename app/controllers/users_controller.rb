@@ -5,11 +5,13 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = find_user
   end
 
   def update
-    @user.update(user_params) 
-    redirect_to(users_path)
+    user = find_user
+    user.update(user_params)
+    redirect_to(user_index_path)
   end
 
   private

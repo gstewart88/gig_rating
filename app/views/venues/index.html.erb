@@ -1,7 +1,11 @@
-<div> <h1>Listing Venues</h1> </div>
+<img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/Habima_Theatre_building-Tel_Aviv-3_zpsc3sut9gd.jpg" alt="">
 
-<div>
-  <%#= link_to 'Add New Venue', new_venue_path if can? :manage, Venue %>
-  <strong><%= link_to "New Venue", new_venue_path %></strong>
+<div class="listing_venues">
+  <h1>Listing Venues</h1>
 </div>
 <%= render @venues %>
+
+<%#= link_to 'Add New Venue', new_venue_path if can? :manage, Venue %>
+<div class="new_venue_center">
+  <%= link_to "New Venue", new_venue_path, class: "new_venue_button" %>
+</div>
