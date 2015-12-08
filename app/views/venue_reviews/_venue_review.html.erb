@@ -1,5 +1,5 @@
 <%= venue_review.title %>
-<%= venue_review.average_rating.round(1) %>
+<%= venue_review.average_rating %>
 <p>
   <%= button_to('Show', venue_review, method: :get) %>
   <%= button_to('Edit', edit_venue_review_path(venue_review), method: :get)  %>
