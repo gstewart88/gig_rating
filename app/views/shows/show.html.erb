@@ -4,6 +4,7 @@
   <p><%= link_to image_tag(@show.show_img.medium.url) %></p>
 
   <p><strong>Category: </strong><%= @show.category.try(:name) %></p>
+  <p><strong>Genre: </strong><%= @show.category.try(:genre).try(:name) %></p>
 
   <div class="menu">
     <ul>

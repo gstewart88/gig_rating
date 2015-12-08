@@ -1,14 +1,12 @@
 <%= form_for(@show_review) do |f| %>
 <%= f.label :title, 'Review Title:' %>
 <%= f.text_field :title %><br />
-<%= f.label :author, 'Author:' %>
-<%= f.text_field :author %><br />
 <%= f.label :show_id %>
 <%= f.select :show_id, Show.all.map { |c| [c.name, c.id] } %><br />
 <%= f.label :description, 'Description:' %>
 <%= f.text_field :description %><br />
 <%= f.label :rating %>
-<%= f.number_field :rating, min: 0, max: 5, step: 0.5 %>
+<%= f.number_field :rating, min: 0, max: 5, step: 1 %>
 <br />
   <%= f.submit %>
 </div>
