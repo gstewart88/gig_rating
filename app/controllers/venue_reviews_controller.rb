@@ -14,7 +14,7 @@ class VenueReviewsController < ApplicationController
     # Venue.create(venue_params) 
     # redirect_to(venues_path)
     @venue_review = VenueReview.new(venue_review_params)
-
+    @venue_review.user = current_user
     respond_to do |format|
       if @venue_review.save
         format.html { redirect_to @venue_review, notice: 'Venue Review was successfully created.' }
@@ -48,7 +48,7 @@ class VenueReviewsController < ApplicationController
   end
 
   def venue_review_params
-    params.require(:venue_review).permit(:title, :venue_id, :author, :description, :rating, :user_id)
+    params.require(:venue_review).permit(:title, :venue_id, :author, :description, :rating, :user_id, :accessibility, :acoustics, :cleanliness, :lighting, :location, :parking, :seating)
   end
 
 
