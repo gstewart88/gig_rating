@@ -10,8 +10,8 @@ class Ability
     elsif
       user.role?  :registered
       can :cread, :all
-      can :update, ShowReview
-      can :update, VenueReview
+      # can :update, ShowReview
+      # can :update, VenueReview
     else
       can :read, :all
 

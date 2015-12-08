@@ -1,4 +1,4 @@
-<%= link_to "New Review", new_show_review_path %>
+<%= link_to "New Review", new_show_review_path if can? :create, ShowReview %>
 
 <p id="notice"><%= notice %></p>
 <%= render @show_reviews %>

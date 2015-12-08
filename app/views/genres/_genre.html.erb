@@ -2,5 +2,7 @@
 <div class="box">
 <%= genre.name %>
 <%= link_to("Show", genre_path(genre)) %>
+<%= button_to('Edit', edit_genre_path(genre), method: :get) if can? :manage, Genre %>
+<%= button_to('Delete', genre_path(genre), method: :delete, data:{confirm: 'Delete the genre? Are you sure?'}) if can? :delete, Genre %>
 </div>
 <br>

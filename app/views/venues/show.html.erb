@@ -7,7 +7,7 @@
 
   <div class="menu">
     <ul>
-    <li><strong><%= link_to 'Edit', edit_venue_path(@venue) %></strong></li>
+    <li><strong><%= link_to 'Edit', edit_venue_path(@venue) if can? :update, Venue %></strong></li>
     <li><strong><%= link_to 'Back', venues_path %></strong></li>
     </ul>
 
