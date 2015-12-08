@@ -1,6 +1,6 @@
-<p><%= venue_review.title %></p>
-<p><%= venue_review.venue.try(:name) %></p>
-<p><%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %></p>
+<p><strong>Venue Name: </strong><%= venue_review.title %></p>
+<p><strong>Venue Review Title: </strong><%= venue_review.venue.try(:name) %></p>
+<p><strong>Venue Average Rating: </strong><%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %></p>
 
 <div class="menu">
   <ul>
