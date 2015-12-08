@@ -1,7 +1,4 @@
-<h2><%= @performance.name %></h2>
-
-<%= link_to 'Edit', edit_performance_path(@performance) %> |
-<%= link_to 'Back', performances_path %>
+<h2><% @performance %></h2>
 
 <br>
 <div >
@@ -14,6 +11,7 @@
 
   <div>
       <li><strong><%= link_to 'Back', performances_path %></strong></li>
+      <li><strong><%= link_to 'Edit', edit_performance_path(@performance) %></strong></li>
   </div>
 
 </div>

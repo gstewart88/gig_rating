@@ -1,8 +1,7 @@
 <div> <h1>Listing Venues</h1> </div>
 
 <div>
-  <%= link_to 'Add New Venue', new_venue_path if can? :manage, Venue %>
+  <%#= link_to 'Add New Venue', new_venue_path if can? :manage, Venue %>
+  <strong><%= link_to "New Venue", new_venue_path %></strong>
 </div>
 <%= render @venues %>
-<br>
-<%= link_to "New Venue", new_venue_path %>
