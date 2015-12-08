@@ -318,14 +318,15 @@ nav {
   width: 198px;
 }
 
-
-
-.thumbnail {
-
-}
-
 .thumbnail-label {
-
+  font-size: 20px;
+  position: relative;
+  background-color: rgba(192,192,192, 0.75);
+  color: white;
+  margin: 0 auto;
+  width: auto;
+  top: 125px;
+  padding: 10px;
 }
 
 
