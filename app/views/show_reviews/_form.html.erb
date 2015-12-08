@@ -6,8 +6,14 @@
 <%= f.select :show_id, Show.all.map { |c| [c.name, c.id] } %><br />
 <%= f.label :description, 'Review:' %>
 <%= f.text_field :description %><br />
-<%= f.label :rating %>
-<%= f.number_field :rating, min: 0, max: 5, step: 1 %>
+
+<span class="rating">
+  <% (1..5).to_a.reverse.each do |rating| %>
+    <%= f.radio_button :rating, rating, class: 'rating-input' %>
+    <%= f.label "rating_#{rating}", nil, class: 'rating-star' %>
+  <% end %>
+</span>
+
 <br />
   <%= f.submit %>
 </div>
