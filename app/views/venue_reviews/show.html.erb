@@ -1,0 +1,15 @@
+<div>
+  <p><strong><%= @venue_review.title %></strong></p>
+  <p><%= @venue_review.venue %></p>
+  <p><%= @venue_review.description %></p>
+  <p><%= @venue_review.accessibility %></p>
+
+  <div class="menu">
+    <ul>
+    <li><strong><%= link_to 'Edit', edit_venue_review_path(@venue_review) %></strong></li>
+    <li><strong><%= link_to 'Back', venue_reviews_path %></strong></li>
+    </ul>
+
+  </div>
+
+</div>
