@@ -203,14 +203,13 @@ nav {
   text-decoration: none;
   color: black;
 
-  background: white;
-  opacity: 0.75;
+  background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 30px;
 }
 
 .s1_create_button:hover {
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .s1_what_button {
@@ -218,14 +217,13 @@ nav {
   text-decoration: none;
   color: black;
 
-  background: white;
-  opacity: 0.75;
+  background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 25px;
 }
 
 .s1_what_button:hover {
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .first_buttons_left {
@@ -253,14 +251,13 @@ nav {
   text-decoration: none;
   color: black;
 
-  background: white;
-  opacity: 0.75;
+  background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 60px;
 }
 
 .s2_venue_button:hover {
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .s2_show_button {
@@ -268,14 +265,13 @@ nav {
   text-decoration: none;
   color: black;
 
-  background: white;
-  opacity: 0.75;
+  background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 70.5px;
 }
 
 .s2_show_button:hover {
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .second_buttons_left {
@@ -303,20 +299,45 @@ nav {
   text-decoration: none;
   color: black;
 
-  background: white;
-  opacity: 0.75;
+  background-color: rgba(255, 255, 255, 0.75);
 
   padding: 15px 60px;
 }
 
 .new_venue_button:hover {
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .new_venue_center {
   margin: 0 auto;
   width: 198px;
 }
+
+
+
+
+.new_show_button {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+
+  background-color: rgba(255, 255, 255, 0.75);
+
+  padding: 15px 60px;
+}
+
+.new_show_button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.new_show_center {
+  margin: 0 auto;
+  width: 198px;
+}
+
+
+
+
 
 .thumbnail-label {
   font-size: 20px;
