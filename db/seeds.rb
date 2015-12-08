@@ -97,25 +97,6 @@ Venue.create!(name: 'The Lyceum', location: 'Edinburgh', venue_img: File.open(Fi
 Venue.create!(name: 'Edinburgh Playhouse', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Playhouse.jpg")))
 Venue.create!(name: 'Edinburgh Traverse Theatre', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Traverse.jpg")))
 
-# Show.delete_all
-# Show.create!(name: 'Matilda the Musical', genre: gn2, description: d1, gig_image: File.open(File.join(Rails.root,"/public/images/Matilda.jpeg")))
-
-
-
-
-Show.delete_all
-Show.create!(name: "Billy Elliot", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/BillyElliot.jpg")))
-Show.create!(name: "Cats", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/Cats.jpg")))
-Show.create!(name: "Dirty Dancing", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/DirtyDancing.jpg")))
-Show.create!(name: "Les Miserables", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/LesMiserables.jpg")))
-Show.create!(name: "Oliver!", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/Oliver!.jpg")))
-Show.create!(name: "The Lion King", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/TheLionKing.jpg")))
-Show.create!(name: "The Phantom of The Opera", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/ThePhantomofTheOpera.png")))
-Show.create!(name: "The Wizard of Oz", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/TheWizardofOz.jpg")))
-Show.create!(name: "We Will Rock You", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/WeWillRockYou.jpg")))
-Show.create!(name: "Wicked", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/Wicked.jpg")))
-
-
 User.delete_all
 
 User.create!(email: "simon@simon.com", password: "password", role_id: '3')
