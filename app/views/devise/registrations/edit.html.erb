@@ -51,12 +51,13 @@
 <div class="form-col-right">
   <%= f.password_field :current_password, autocomplete: "off" %>
 </div>
-</div>
 <br>
 <br>
 <div class="registration_links">
   <%= link_to "Cancel", :back %> | <%= f.submit "Update" %>
+</div>
 <% end %>
+<div class="registration_links">
   <br>
   <br>
   <small>Unhappy with our site? <%= button_to "Delete My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></small>
