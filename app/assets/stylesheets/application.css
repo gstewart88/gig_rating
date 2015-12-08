@@ -97,9 +97,10 @@ li {
 .password_inputs {
   margin: 0 auto;
   width: 353px;
+  padding-bottom: 10px;
 }
 
-.sign_up_links {
+.registration_links {
   margin: 0 auto;
   width: 157px;
 }
@@ -109,9 +110,16 @@ nav {
   width: 740px;
 }
 
+.password_inputs_longer {
+  margin: 0 auto;
+  width: 252px;
+  padding-bottom: 10px;
+}
 
-
-
+.editing_head {
+  margin: 0 auto;
+  width: 100px;
+}
 
 
 

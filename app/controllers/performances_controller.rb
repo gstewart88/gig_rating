@@ -6,7 +6,13 @@ class PerformancesController < ApplicationController
   before_action :set_performance, only: [:show, :edit, :update, :destroy]
 
   def index
+    if params[:name]
+      @performance = Performance.new
+      @performances = @performance.search_result("#{params[:name]}")
+        # binding.pry
+    else
       @performances = Performance.all
+    end
   end
 
   def show
