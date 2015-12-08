@@ -1,5 +1,4 @@
 
-<!-- <div style="transform: skewX(-15deg); transform: translate(5px,5px)" class="container avatarBox .text_center"> -->
 <div>
 
   <div>
@@ -12,8 +11,6 @@
   
     <p>
       <%= button_to('Show', show, method: :get)%>
-      <%#= button_to('Edit', edit_show_path(show), method: :get) %>
-      <%#= button_to('Delete', show_path(show), method: :delete) %>
       <li><%= button_to('Edit', edit_show_path(show), method: :get) if can? :manage, Show %></li>
       <li><%= button_to('Delete', show_path(show), method: :delete, data:{confirm: 'Delete the show? Are you sure?'}) if can? :delete, Show %></li>
     </p>

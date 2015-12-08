@@ -1,11 +1,12 @@
-<%= venue_review.title %> </br>
-<%= venue_review.venue.try(:name) %> </br>
-<%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %>
-<p>
-  <%= button_to('Show', venue_review, method: :get) %>
-  <%#= button_to('Edit', edit_venue_review_path(venue_review), method: :get)  %>
-  <%#= button_to('Delete', venue_review_path(venue_review), method: :delete) %>
+<p><%= venue_review.title %></p>
+<p><%= venue_review.venue.try(:name) %></p>
+<p><%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %></p>
 
-  <%= button_to('Edit', edit_venue_review_path(venue_review), method: :get ) if can? :update, VenueReview %>
-  <%= button_to('Delete', venue_review_path(venue_review), method: :delete, data:{confirm: 'Delete the schedule? Are you sure?'}) if can? :delete, VenueReview %>
-</p>
+<div class="menu">
+  <ul>
+    <li><%= link_to('Show', venue_review, method: :get) %></li>
+    <li><%= button_to('Edit', edit_venue_review_path(venue_review), method: :get ) if can? :update, VenueReview %></li>
+    <li><%= button_to('Delete', venue_review_path(venue_review), method: :delete, data:{confirm: 'Delete the schedule? Are you sure?'}) if can? :delete, VenueReview %></li>
+  </ul>
+</div>
+
