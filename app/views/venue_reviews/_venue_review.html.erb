@@ -1,4 +1,5 @@
-<%= venue_review.title %>
+<%= venue_review.title %> </br>
+<%= venue_review.venue.name %> </br>
 <%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %>
 <p>
   <%= button_to('Show', venue_review, method: :get) %>
