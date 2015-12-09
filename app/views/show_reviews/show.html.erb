@@ -2,15 +2,25 @@
 <br>
 <div>
 <p><strong>Show Name: </strong><%= @show_review.show.name %></p>
-<p><strong>Review Rating: </strong><%= "★"*@show_review.rating %><%= "☆"*(5 - @show_review.rating) %></p>
+<p><strong>Review Rating: </strong>
+
+<% (1..(@show_review.rating)).each do  %>
+ <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+<% end %>
+<% (1..(5 - @show_review.rating)).each do  %>
+ <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+<% end %>
+
+</p>
+
 <p><strong>Review Title: </strong><%= @show_review.title %></p>
 <p><strong>By: </strong><%= @show_review.user.email %> on <%= (@show_review.created_at).strftime("%d %B %Y") %></p>
 
 <% if user_signed_in? %>
   <p><strong>Review: </strong><%= @show_review.description %></p>
 <% else %>
-  <p><strong>Review: </strong><%= "#{@show_review.description[0...5]}..."  %></p>
-  <button id='read_more'>Read More</button>
+  <p><strong>Review: </strong><%= "#{@show_review.description[0...5]}..."  %>
+  <button id='read_more'>Read More</button></p>
 <% end %>
 
   <div class="menu">

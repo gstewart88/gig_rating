@@ -1,8 +1,14 @@
+
 <div class="box box-4 thumbnail">
 
   <div class="thumbnail-label">
     <%= venue_review.title %><br>
-    <%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %>
+    <% (1..(venue_review.average_rating)).each do  %>
+     <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - venue_review.average_rating)).each do  %>
+     <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </div>
   <div class="thumbnail-sublabel">
     <div class="thumbnail-sublabel-left">

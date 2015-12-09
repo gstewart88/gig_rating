@@ -4,22 +4,56 @@
 <%= f.label :venue_id %>
 <%= f.select :venue_id, Venue.all.map { |c| [c.name, c.id] } %><br />
 <%= f.label :description, 'Review:' %>
-<%= f.text_field :description, :size=>"500",:maxlength=>"300" %><br />
-<%= f.label :accessibility %>
-<%= f.number_field :accessibility, min: 0, max: 5, step: 1 %><br />
-<%= f.label :acoustics %>
-<%= f.number_field :acoustics, min: 0, max: 5, step: 1 %><br />
-<%= f.label :cleanliness %>
-<%= f.number_field :cleanliness, min: 0, max: 5, step: 1 %><br />
-<%= f.label :lighting %>
-<%= f.number_field :lighting, min: 0, max: 5, step: 1 %><br />
-<%= f.label :location %>
-<%= f.number_field :location, min: 0, max: 5, step: 1 %><br />
-<%= f.label :parking %>
-<%= f.number_field :parking, min: 0, max: 5, step: 1 %><br />
-<%= f.label :seating %>
-<%= f.number_field :seating, min: 0, max: 5, step: 1 %><br />
-
+<%= f.text_field :description, :size=>"50",:maxlength=>"300" %><br />
+Accessibility
+<span class="rating">
+  <% (1..5).to_a.reverse.each do |accessibility| %>
+    <%= f.radio_button :accessibility, accessibility, class: 'rating-input' %>
+    <%= f.label "accessibility_#{accessibility}", nil, class: 'rating-star' %>
+  <% end %>
+</span><br />
+Acoustics
+<span class="rating">
+  <% (1..5).to_a.reverse.each do |acoustics| %>
+    <%= f.radio_button :acoustics, acoustics, class: 'rating-input' %>
+    <%= f.label "acoustics_#{acoustics}", nil, class: 'rating-star' %>
+  <% end %>
+</span><br />
+Cleanliness
+<span class="rating">
+  <% (1..5).to_a.reverse.each do |cleanliness| %>
+    <%= f.radio_button :cleanliness, cleanliness, class: 'rating-input' %>
+    <%= f.label "cleanliness_#{cleanliness}", nil, class: 'rating-star' %>
+  <% end %>
+</span><br />
+Lighting
+<span class="rating">
+  <% (1..5).to_a.reverse.each do |lighting| %>
+    <%= f.radio_button :lighting, lighting, class: 'rating-input' %>
+    <%= f.label "lighting_#{lighting}", nil, class: 'rating-star' %>
+  <% end %>
+</span><br />
+Location
+<span class="rating">
+  <% (1..5).to_a.reverse.each do |location| %>
+    <%= f.radio_button :location, location, class: 'rating-input' %>
+    <%= f.label "location_#{location}", nil, class: 'rating-star' %>
+  <% end %>
+</span><br />
+Parking
+<span class="rating">
+  <% (1..5).to_a.reverse.each do |parking| %>
+    <%= f.radio_button :parking, parking, class: 'rating-input' %>
+    <%= f.label "parking_#{parking}", nil, class: 'rating-star' %>
+  <% end %>
+</span><br />
+Seating
+<span class="rating">
+  <% (1..5).to_a.reverse.each do |seating| %>
+    <%= f.radio_button :seating, seating, class: 'rating-input' %>
+    <%= f.label "seating_#{seating}", nil, class: 'rating-star' %>
+  <% end %>
+</span><br />
   <%= f.submit %>
 </div>
 
