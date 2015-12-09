@@ -15,9 +15,11 @@
 //= require turbolinks
 //= require_tree .
 
-function toggleOverlay(){
+function toggleOverlay(b){
+  b = b || '';
   var overlay = document.getElementById('overlay');
-  var specialBox = document.getElementById('specialBox');
+  var specialBox = document.getElementById('specialBox' + b);
+  console.log(b);
   overlay.style.opacity = .8;
   if(overlay.style.display == "block"){
     overlay.style.display = "none";
@@ -28,7 +30,13 @@ function toggleOverlay(){
   }
 }
 
+
 $(function() {
+
+  $('.toggleOverlay').click(function(ev) {
+    ev.preventDefault;
+    toggleOverlay($(ev.currentTarget).data('b'));
+  });
 
 $('#read_more').click(function() { 
   // console.log('hhhhhh');
