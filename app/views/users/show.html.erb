@@ -1,5 +1,6 @@
 <img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
 <br>
+<div class="show_info_area">
 <%= link_to "Edit Profile", edit_user_registration_path %>
 <br>
 <br>
@@ -10,3 +11,4 @@
 <%= current_user.email %>
 <br>
 <%= current_user.try(:location) %>
+</div>

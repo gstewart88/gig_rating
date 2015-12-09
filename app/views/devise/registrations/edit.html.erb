@@ -1,5 +1,7 @@
 <img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
 <br>
+<div class="show_info_area">
+
 <div class="editing_head">
   <h2>Editing <%= current_user.try(:username) %></h2>
 </div>
@@ -63,4 +65,5 @@
   <br>
   <br>
   <small>Unhappy with our site? <%= button_to "Delete My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></small>
+</div>
 </div>

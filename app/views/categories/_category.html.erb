@@ -3,5 +3,5 @@
   <img class="thumbnail-img" src="https://reddingtalent.files.wordpress.com/2011/06/tragedycomedy.jpg">
   <%= button_to('Delete', category_path(category), method: :delete, data:{confirm: 'Delete the category? Are you sure?'}, class: "thumbnail-buttons form-3") if can? :delete, Category %>
   <%= button_to('Edit', edit_category_path(category), method: :get, class: "thumbnail-buttons form-2") if can? :manage, Category %>
-  <%= button_to("Show", category_path(category), class: "thumbnail-buttons form-1") %>
+  <%= button_to("Show", category_path(category), method: :get, class: "thumbnail-buttons form-1") %>
 </div>
