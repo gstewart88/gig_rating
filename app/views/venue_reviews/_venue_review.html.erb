@@ -2,6 +2,13 @@
 <p><strong>Venue Review Title: </strong><%= venue_review.venue.try(:name) %></p>
 <p><strong>Venue Average Rating: </strong><%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %></p>
 
+<% if user_signed_in? %>
+  <p><strong>Review: </strong><%= venue_review.description %></p>
+<% else %>
+  <p><strong>Review: </strong><%= "#{venue_review.description[0...5]}..."  %></p>
+  <button id='read_more'>Read More</button>
+<% end %>
+
 <div class="menu">
   <ul>
     <li><%= link_to('Show', venue_review, method: :get) %></li>
