@@ -1,9 +1,10 @@
-
+<img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
+<br>
 
   <div id="performances_list"> <%= render @performances %></div>
 
-<div>
-  <%= link_to 'New Performance', new_performance_path if can? :create, Performance%>
+<br>
+<br>
+<div class="new_performance_center">
+  <%= link_to('New Performance', new_performance_path, class: "new_performance_button") if can? :create, Performance%>
 </div>
-
- 

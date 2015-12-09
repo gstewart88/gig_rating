@@ -1,15 +1,8 @@
-<div >
-  <div>
-  <p><strong>Show Name:</strong><%= performance.show.try(:name) %></p>
-  <p><strong>Venue Name: </strong> <%= performance.venue.try(:name) %></p>
-  <p><strong>Schedule: </strong><%= performance.human_readable_date %></p>
-  
-  <ul style="transform: skewX(-25deg)">
-    <li><%= button_to('Show', performance_path(performance), method: :get)%></li>
-    <li><%= button_to('Edit', edit_performance_path(performance), method: :get) if can? :manage, Performance %></li>
-    <li><%= button_to('Delete', performance_path(performance), method: :delete, data:{confirm: 'Delete the performance? Are you sure?'}) if can? :delete, Performance %></li>
-  </ul><br>
-
-</div>
-
+<div class="box box-4 thumbnail">
+  <div class="thumbnail-label"><%= performance.show.try(:name) %></div>
+  <div class="thumbnail-sublabel"><div class="thumbnail-sublabel-left"><%= performance.venue.try(:name) %></div><div class="thumbnail-sublabel-right"><%= performance.human_readable_date %></div></div>
+  <%= image_tag performance.show.show_img.gridlist.url %>  
+  <%= button_to('Show', performance_path(performance), method: :get, class: "thumbnail-buttons form-1")%>
+  <%= button_to('Edit', edit_performance_path(performance), method: :get, class: "thumbnail-buttons form-2") if can? :manage, Performance %>
+  <%= button_to('Delete', performance_path(performance), method: :delete, data:{confirm: 'Delete the performance? Are you sure?'}, class: "thumbnail-buttons form-3") if can? :delete, Performance %>
 </div>

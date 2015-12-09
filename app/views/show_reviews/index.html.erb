@@ -1,5 +1,9 @@
-<%= link_to "New Review", new_show_review_path if can? :create, ShowReview %>
+<img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
+<br>
 
-<p id="notice"><%= notice %></p>
 <%= render @show_reviews %>
 <br>
+<br>
+<div class="new_show_review_center">
+  <%= link_to("New Review", new_show_review_path, class: "new_show_review_button") if can? :create, ShowReview %>
+</div>
