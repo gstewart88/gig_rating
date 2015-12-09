@@ -3,8 +3,6 @@ CarrierWave.configure do |config|
   # Use local storage if in development or test, AWS in production
   config.storage = Rails.env.production? ? :fog : :file
 
-  config.cache_dir = "#{Rails.root}/tmp/uploads"
-
   # config/initializers/carrierwave.rb
   config.fog_credentials = {
     :provider  => 'AWS',  # required
