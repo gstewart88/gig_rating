@@ -6,7 +6,11 @@
     <p><strong>Review: </strong><%= @venue_review.description %></p>
   <% else %>
     <p><strong>Review: </strong><%= "#{@venue_review.description[0...5]}..."  %></p>
+<<<<<<< HEAD
     <button id="read_more">Read More</button>
+=======
+    <button id='read_more'>Read More</button>
+>>>>>>> develop
   <% end %>
 
   <p><strong>Accessibility: </strong><%= "★"*@venue_review.accessibility %><%= "☆"*(5 - @venue_review.accessibility) %></p>

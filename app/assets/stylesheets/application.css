@@ -63,7 +63,7 @@ a {
 
 .box {
   display: inline-block;
-  margin-right: -4px;
+  margin-right: 0px;
 }
 
 .box-1 {
@@ -141,6 +141,37 @@ a {
   width: 49%;
 }
 
+.navleft {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+}
+
+.navmiddle {
+  position: relative;
+  margin: 50px auto 0 auto;
+  width: 340.25px;
+}
+
+.navright {
+  position: absolute;
+  top: -7px;
+  right: -350px;
+}
+
+.search_go {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  padding: 3.5px;
+}
+
+.search_go:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.profilecircle {
+}
+
 
 
 
@@ -173,7 +204,7 @@ img.bg {
   top: 0;
   left: 0;
 
-  z-index: -2;
+  z-index: -5;
 
 }
 
@@ -430,20 +461,72 @@ nav {
   width: 196px;
 }
 
+.new_performance_button {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  text-shadow: none;
+  background-color: rgba(255, 255, 255, 0.75);
 
+  padding: 15px 60px;
+}
 
+.new_performance_button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
 
-
-
-.thumbnail-label {
-  font-size: 20px;
-  position: relative;
-  background-color: rgba(192,192,192, 0.75);
-  color: white;
+.new_performance_center {
   margin: 0 auto;
-  width: auto;
-  top: 125px;
-  padding: 10px;
+  width: 241px;
+}
+
+.new_show_review_button {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  text-shadow: none;
+  background-color: rgba(255, 255, 255, 0.75);
+
+  padding: 15px 60px;
+}
+
+.new_show_review_button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.new_show_review_center {
+  margin: 0 auto;
+  width: 250px;
+}
+
+.new_venue_review_button {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  text-shadow: none;
+  background-color: rgba(255, 255, 255, 0.75);
+
+  padding: 15px 60px;
+}
+
+.new_venue_review_button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.new_venue_review_center {
+  margin: 0 auto;
+  width: 241px;
+}
+
+
+
+
+
+
+
+
+.thumbnail {
+  position: relative;
 }
 
 .thumbnail-buttons {
@@ -453,10 +536,60 @@ nav {
   margin-right: -5px;
 }
 
+.thumbnail-img {
+  width: 100%;
+  height: 203px;
+}
+
+.thumbnail-label {
+  background-color: rgba(255,255,255,0.75);
+  padding: 10px;
+  position: absolute;
+  bottom: 100px;
+  width: 94.5%;
+  color: black;
+}
+
+.thumbnail-sublabel {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 10px;
+  padding: 7px;
+  position: absolute;
+  bottom: 75px;
+  width: 96%;
+  color: black;
+}
+
+.thumbnail-sublabel-left {
+  position: absolute;
+  left: 1px;
+  top: 1.5px;
+}
+
+.thumbnail-sublabel-right {
+  position: absolute;
+  right: 10px;
+  top: 1.5px;
+}
+
 .button_to {
   display: inline-block;
-  position: relative;
-  bottom: 23px;
+  position: absolute;
+  bottom: 4px;
+}
+
+.form-1 {
+  z-index: -2;
+}
+
+.form-2 {
+  margin-left: 40px;
+  z-index: -1;
+}
+
+.form-3 {
+  margin-left: 71px;
+  z-index: 0;
 }
 
 .thumbnail-buttons:hover {

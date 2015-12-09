@@ -2,6 +2,7 @@
 <p><strong>Venue Review Title: </strong><%= venue_review.venue.try(:name) %></p>
 <p><strong>Venue Average Rating: </strong><%= "★"*venue_review.average_rating %><%= "☆"*(5 - venue_review.average_rating) %></p>
 
+
 <div class="menu">
   <ul>
     <li><%= link_to('Show', venue_review, method: :get) %></li>
@@ -9,4 +10,3 @@
     <li><%= button_to('Delete', venue_review_path(venue_review), method: :delete, data:{confirm: 'Delete the schedule? Are you sure?'}) if can? :delete, VenueReview %></li>
   </ul>
 </div>
-

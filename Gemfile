@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
+gem 'fog'
 gem 'devise'
 gem 'cancancan'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'omniauth'
 gem 'omniauth-facebook'
-# gem 'gmaps4rails'
+
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

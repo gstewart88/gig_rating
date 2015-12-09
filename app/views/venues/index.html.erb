@@ -2,7 +2,8 @@
 <br>
 
 <%= render @venues %>
-
+<br>
+<br>
 <%#= link_to 'Add New Venue', new_venue_path if can? :manage, Venue %>
 <div class="new_venue_center">
   <%= link_to("New Venue", new_venue_path, class: "new_venue_button") if can? :create, Show %>
