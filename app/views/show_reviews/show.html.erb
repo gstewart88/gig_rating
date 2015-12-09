@@ -17,8 +17,8 @@
 <% if user_signed_in? %>
   <p><strong>Review: </strong><%= @show_review.description %></p>
 <% else %>
-  <p><strong>Review: </strong><%= "#{@show_review.description[0...5]}..."  %></p>
-  <button id='read_more'>Read More</button>
+  <p><strong>Review: </strong><%= "#{@show_review.description[0...5]}..."  %>
+  <button id='read_more'>Read More</button></p>
 <% end %>
 
   <div class="menu">

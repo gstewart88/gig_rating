@@ -5,12 +5,9 @@
   <% if user_signed_in? %>
     <p><strong>Review: </strong><%= @venue_review.description %></p>
   <% else %>
-    <p><strong>Review: </strong><%= "#{@venue_review.description[0...5]}..."  %></p>
-<<<<<<< HEAD
-    <button id="read_more">Read More</button>
-=======
+    <p><strong>Review: </strong><%= "#{@venue_review.description[0...5]}..."  %>
     <button id='read_more'>Read More</button>
->>>>>>> develop
+    </p>
   <% end %>
 
   <p><strong>Accessibility: </strong>
