@@ -8,7 +8,19 @@
   <%= show_review.title %>
   </div>
   <div class="thumbnail-sublabel-right">
-  <%= "★"*show_review.rating %><%= "☆"*(5 - show_review.rating) %>
+
+  <% (1..(show_review.rating)).each do  %>
+   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+  <% end %>
+  <% (1..(5 - show_review.rating)).each do  %>
+   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+  <% end %>
+
+
+
+
+
+<!--   <%= "★"*show_review.rating %><%= "☆"*(5 - show_review.rating) %> -->
   </div>
   </div>
   <%= image_tag show_review.show.try(:show_img).gridlist.url %>
