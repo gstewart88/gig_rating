@@ -1,8 +1,8 @@
 <div class="box box-4 thumbnail">
+
   <div class="thumbnail-label"><%= show_review.show.try(:name) %></div>
   <div class="thumbnail-sublabel"><div class="thumbnail-sublabel-left"><%= show_review.title %></div><div class="thumbnail-sublabel-right"><%= "★"*show_review.rating %><%= "☆"*(5 - show_review.rating) %></div></div>
   <%= image_tag show_review.show.try(:show_img).gridlist.url %>
-    <%= button_to('Show', show_review, method: :get, class: "thumbnail-buttons form-1") %>
-    <%= button_to('Edit', edit_show_review_path(show_review), method: :get, class: "thumbnail-buttons form-2") if can? :manage, ShowReview %>
-    <%= button_to('Delete', show_review_path(show_review), method: :delete, data:{confirm: 'Delete the show_review? Are you sure?'}, class: "thumbnail-buttons form-3") if can? :delete, ShowReview %>
-</div>
+  <%= button_to('Show', show_review, method: :get, class: "thumbnail-buttons form-1") %>
+  <%= button_to('Edit', edit_show_review_path(show_review), method: :get, class: "thumbnail-buttons form-2") if can? :manage, ShowReview %>
+  <%= button_to('Delete', show_review_path(show_review), method: :delete, data:{confirm: 'Delete the show_review? Are you sure?'}, class: "thumbnail-buttons form-3") if can? :delete, ShowReview %>
