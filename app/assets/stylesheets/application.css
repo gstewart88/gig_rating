@@ -242,16 +242,9 @@ li:hover {
 .profilecircle {
 }
 
-
-
-
-
 body {
   font-family: Arial, Helvetica;
 }
-
-
-
 
 img.bg {
 
@@ -277,10 +270,6 @@ img.bg {
   z-index: -5;
 
 }
-
-
-
-
 
 /* DROP DOWN MENU
 header{
@@ -440,27 +429,15 @@ Just bust a move
 }
  DROP DOWN MENU */
 
-
-
-
-
 .sign_up_head {
   margin: 0 auto;
   width: 215px;
 }
 
-
-
-
-
 .listing_venues {
   margin: 0 auto;
   width: 228px;
 }
-
-
-
-
 
 .password_inputs {
   margin: 0 auto;
@@ -468,16 +445,10 @@ Just bust a move
   padding-bottom: 10px;
 }
 
-
-
-
 .registration_links {
   margin: 0 auto;
   width: 157px;
 }
-
-
-
 
 .password_inputs_longer {
   margin: 0 auto;
@@ -485,24 +456,19 @@ Just bust a move
   padding-bottom: 10px;
 }
 
-
-
 .editing_head {
 }
 
-
-
-
 .home_logo {
   position: relative;
-  top: 80px;
+  top: 20px;
   width: 310px;
   margin: 0 auto;
 }
 
 .home_motto {
   position: relative;
-  top: 80px;
+  top: 20px;
   width: 241px;
   margin: 0 auto;
   color: rgba(255,255,255,0.75);  
@@ -557,10 +523,6 @@ Just bust a move
   vertical-align: top;
 }
 
-
-
-
-
 .s2_venue_button {
   font-size: 15px;
   text-decoration: none;
@@ -605,10 +567,6 @@ Just bust a move
   vertical-align: top;
 }
 
-
-
-
-
 .new_venue_button {
   font-size: 15px;
   text-decoration: none;
@@ -627,9 +585,6 @@ Just bust a move
   margin: 0 auto;
   width: 198px;
 }
-
-
-
 
 .new_show_button {
   font-size: 15px;
@@ -857,9 +812,26 @@ Just bust a move
   bottom: -400px;
 }
 
+.footerboxes {
+  position: relative;
+  display: inline;
+  width: 120px;
+  margin: 0 auto;
+  bottom: -545px;
+}
 
+.aboutUsBox {
+  background-color: rgba(192,192,192,0.5);
+  color: rgba(0,0,0,0.75);
+  border: none;
+}
 
-
+.privacyBox {
+  background-color: rgba(192,192,192,0.5);
+  color: rgba(0,0,0,0.75);
+  border: none;
+  bottom: 0;
+}
 
 
 
