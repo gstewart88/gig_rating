@@ -156,7 +156,8 @@ a {
 .navright {
   position: absolute;
   top: -7px;
-  right: -350px;
+  width: 100px;
+  right: 0px;
 }
 
 .search_go {

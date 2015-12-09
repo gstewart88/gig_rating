@@ -1,9 +1,9 @@
 <div class="box box-4 thumbnail">
   <div class="thumbnail-label"><%= genre.name %></div>
-  <% if genre.live_music == true %>
-  <img class="thumbnail-img" src="http://img1.gtsstatic.com/wallpapers/9efd7786a65c4f30a2776324d6f23eca_large.jpeg">
-  <% else %>
+  <% if genre.live_music == false %>
   <img class="thumbnail-img" src="https://reddingtalent.files.wordpress.com/2011/06/tragedycomedy.jpg">
+  <% else %>
+  <img class="thumbnail-img" src="http://img1.gtsstatic.com/wallpapers/9efd7786a65c4f30a2776324d6f23eca_large.jpeg">
   <% end %>
   <%= button_to('Delete', genre_path(genre), method: :delete, data:{confirm: 'Delete the genre? Are you sure?'}, class: "thumbnail-buttons form-3") if can? :delete, Genre %>
   <%= button_to('Edit', edit_genre_path(genre), method: :get, class: "thumbnail-buttons form-2") if can? :manage, Genre %>
