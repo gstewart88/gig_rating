@@ -58,13 +58,34 @@
     </nav>
     </div>
 
+    
+    <div id="overlay"></div>
+
+    <div id="specialBox">
+      <p><%= render 'home/about_us' %></p> 
+      <button class='toggleOverlay'>Close</button>
+    </div>
+    <div id="specialBoxb">
+      <p><%= render 'home/privacy' %></p> 
+      <button data-b='b' class='toggleOverlay'>Close</button>
+    </div>
+    <div id="aboutUsBox" class="aboutUsBox">
+      <button class='toggleOverlay'>About Us</button>
+    </div>
+
+    <div id="privacyBox" class="privacyBox">
+      <button data-b='b' class='toggleOverlay'>Privacy</button>
+    </div>
+
+
     <br>
     <%= yield %>
     <br>
     <div class="notice-messages">
-    <p class="notice" style="color:white;"><%= notice %></p>
-    <p class="alert" style="color:white;"><%= alert %></p>
+      <p class="notice" style="color:white;"><%= notice %></p>
+      <p class="alert" style="color:white;"><%= alert %></p>
     </div>
   </div>
+
 </body>
 </html>

@@ -15,6 +15,20 @@
 //= require turbolinks
 //= require_tree .
 
+function toggleOverlay(b){
+  b = b || '';
+  var overlay = document.getElementById('overlay');
+  var specialBox = document.getElementById('specialBox' + b);
+  console.log(b);
+  overlay.style.opacity = .8;
+  if(overlay.style.display == "block"){
+    overlay.style.display = "none";
+    specialBox.style.display = "none";
+  } else {
+    overlay.style.display = "block";
+    specialBox.style.display = "block";
+  }
+}
 
 var myMap = myMap || {};
 
@@ -40,6 +54,11 @@ myMap.initialize = function(i) {
 
 
 $(function(){
+  $('.toggleOverlay').click(function(ev) {
+    ev.preventDefault;
+    toggleOverlay($(ev.currentTarget).data('b'));
+  });
+
   myMap.mapCanvas = $('#map-canvas')[0];
   //console.log(myMap.mapCanvas.data("venue-id"));
   var i = $('#map-canvas').data("venue-id");
