@@ -1,5 +1,6 @@
 <div class="box box-4 thumbnail">
   <div class="thumbnail-label"><%= venue.name %></div>
+  <div class="thumbnail-sublabel"><div class="thumbnail-sublabel-right"><%= venue.location %></div></div>
   <%= image_tag venue.venue_img.gridlist.url %>
   <%= button_to('Show', venue, method: :get, class: "thumbnail-buttons form-1")%>
   <%= button_to('Edit', edit_venue_path(venue), method: :get, class: "thumbnail-buttons form-2") if can? :manage, Venue %>
