@@ -14,6 +14,9 @@ class PerformancesController < ApplicationController
     else
       @performances = Performance.all
     end
+
+    # render @performances, layout: false if request.xhr?
+
   end
 
   def show

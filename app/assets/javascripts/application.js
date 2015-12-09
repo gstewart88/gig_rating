@@ -14,3 +14,27 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+
+$('#read_more').click(function() { 
+  // console.log('hhhhhh');
+  alert('You must sign-in to read full review!');
+});
+
+
+// $('#search_form').
+// on('ajax:success', function(evt, data, status, xhr){
+//   // console.log('success: ' + data);
+//   $('#performances_list').html(data);
+// }).
+// on('ajax:error', function(xhr, status, error ){
+//   console.log('failed: ' + error);
+// });
+
+});
+
+
+
+
+

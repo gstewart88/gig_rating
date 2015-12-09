@@ -1,7 +1,7 @@
 <div>
-    <%= form_tag(performances_path, method: "get") do %>
-    <%= text_field_tag(:name, nil, :placeholder => "Search Shows And Venues") %>
-    <%= submit_tag("Go!") %>
-    <% end %>
+  <%= form_tag performances_path, method: :get, id: :search_form, remote: true do %>
+  <%= text_field_tag(:name, nil, :placeholder => "Search Shows And Venues") %>
+  <%= submit_tag("Go!") %>
+  <% end %>  
 </div>
 
