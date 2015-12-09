@@ -14,3 +14,41 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+var myMap = myMap || {};
+
+myMap.initialize = function(i) {
+  
+  var lats = [0, 55.8663779, 55.860825, 55.9467264, 55.946832, 55.957104, 55.9476394];
+  var lngs = [0, -4.256215, -4.28764, 3.1860155, -3.2044301, -3.184618, -3.2048186 ];
+
+  var lat = parseFloat(lats[i]);
+  var lng = parseFloat(lngs[i]);
+
+  var mapOptions = {
+    center: {lat, lng},
+    zoom: 16,
+  };
+  var map = new google.maps.Map(myMap.mapCanvas, mapOptions);
+    // Marker Option
+  var marketOptions = {
+    position: new google.maps.LatLng(lat,lng)
+  };
+  var marker = new google.maps.Marker(marketOptions);
+  marker.setMap(map);
+};
+
+
+
+$(function(){
+  myMap.mapCanvas = $('#map-canvas')[0];
+  //console.log(myMap.mapCanvas.data("venue-id"));
+  var i = $('#map-canvas').data("venue-id");
+  myMap.initialize(i);
+
+
+  $('#read_more').click(function() { 
+    alert('You must sign-in to read full review!');
+  });
+});  

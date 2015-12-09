@@ -6,6 +6,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'omniauth'
 gem 'omniauth-facebook'
+# gem 'gmaps4rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
