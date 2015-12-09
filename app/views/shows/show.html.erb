@@ -1,16 +1,18 @@
-<div>
-  <p><strong>Show Name:</strong><%= @show.name %></p>
+<img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
+<br>
+<div class="show_info_area">
+  <div class="show_info_area_right">
+    <p><%= link_to image_tag(@show.show_img.medium.url) %></p>
+  </div>
+  <div class="show_info_area_left">
+  <h3><%= @show.name %></h3>
+  <h3><%= @show.category.try(:name) %></h3>
+  <h3><%= @show.category.try(:genre).try(:name) %></h3>
+  </div>
 
-  <p><%= link_to image_tag(@show.show_img.medium.url) %></p>
-
-  <p><strong>Category: </strong><%= @show.category.try(:name) %></p>
-  <p><strong>Genre: </strong><%= @show.category.try(:genre).try(:name) %></p>
-
-  <div class="menu">
-    <ul>
-    <li><strong><%= link_to 'Edit', edit_show_path(@show) if can? :update, Show  %></strong></li>
-    <li><strong><%= link_to 'Back', shows_path %></strong></li>
-    </ul>
+  <%= link_to('Edit', edit_show_path(@show), class: "show_info_area_button-edit") if can? :update, Show  %>
+  <%= link_to('Back', shows_path, class: "show_info_area_buttons-back") %>
+    
 
   </div>
 

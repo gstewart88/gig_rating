@@ -1,7 +1,9 @@
-
-<%= link_to "New Review", new_venue_review_path if can? :create, VenueReview %>
-
+<img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
 <br>
 
 <%= render @venue_reviews %>
 <br>
+<br>
+<div class="new_venue_review_center">
+  <%= link_to("New Review", new_venue_review_path, class: "new_venue_review_button") if can? :create, VenueReview %>
+</div>

@@ -1,15 +1,16 @@
-<div class="box box-4 thumbnail">
+<div class="box neg-margin-box box-4 thumbnail">
 
   <div class="thumbnail-label">
-  <%= show_review.show.try(:name) %>
+    <%= show_review.title %><br>
+    <%= "★"*show_review.rating %><%= "☆"*(5 - show_review.rating) %>
   </div>
   <div class="thumbnail-sublabel">
-  <div class="thumbnail-sublabel-left">
-  <%= show_review.title %>
-  </div>
-  <div class="thumbnail-sublabel-right">
-  <%= "★"*show_review.rating %><%= "☆"*(5 - show_review.rating) %>
-  </div>
+    <div class="thumbnail-sublabel-left">
+      <%= show_review.show.try(:name) %>
+    </div>
+    <div class="thumbnail-sublabel-right">
+      <%= show_review.author %>
+    </div>
   </div>
   <%= image_tag show_review.show.try(:show_img).gridlist.url %>
   <%= button_to('Show', show_review, method: :get, class: "thumbnail-buttons form-1") %>
