@@ -4,7 +4,7 @@
 <%= f.label :venue_id %>
 <%= f.select :venue_id, Venue.all.map { |c| [c.name, c.id] } %><br />
 <%= f.label :description, 'Review:' %>
-<%= f.text_field :description, :size=>"500",:maxlength=>"300" %><br />
+<%= f.text_field :description, :size=>"50",:maxlength=>"300" %><br />
 Accessibility
 <span class="rating">
   <% (1..5).to_a.reverse.each do |accessibility| %>
