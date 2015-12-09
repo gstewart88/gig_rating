@@ -6,7 +6,7 @@ class GenresController < ApplicationController
   before_action :set_genre, only: [:show, :edit, :update, :destroy]
 
   def index
-    @genres = Genre.all
+    @genres = Genre.all.sort { |a, b| [a.name, b.live_music ? false : true] <=> [b.name, a.live_music ? true : false] }
   end
 
 
