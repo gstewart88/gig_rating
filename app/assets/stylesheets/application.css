@@ -821,16 +821,15 @@ Just bust a move
 }
 
 .aboutUsBox {
+
   background-color: rgba(192,192,192,0.5);
   color: rgba(0,0,0,0.75);
-  border: none;
 }
 
 .privacyBox {
+
   background-color: rgba(192,192,192,0.5);
   color: rgba(0,0,0,0.75);
-  border: none;
-  bottom: 0;
 }
 
 
