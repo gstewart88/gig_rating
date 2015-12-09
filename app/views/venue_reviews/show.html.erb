@@ -1,11 +1,10 @@
-<div>
-  <p><strong>Review Title: </strong><%= @venue_review.title %></p>
-  <p><strong>Venue: </strong> <%= @venue_review.venue.name %></p>
+<%= @venue_review.title %>
+<%= @venue_review.venue.name %>
 
   <% if user_signed_in? %>
-    <p><strong>Review: </strong><%= @venue_review.description %></p>
+    <%= @venue_review.description %>
   <% else %>
-    <p><strong>Review: </strong><%= "#{@venue_review.description[0...5]}..."  %></p>
+    <%= "#{@venue_review.description[0...5]}..."  %>
     <button id='read_more'>Read More</button>
   <% end %>
 
@@ -73,13 +72,5 @@
    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
   <% end %>
   </p>
-
-  <div class="menu">
-    <ul>
-    <li><strong><%= link_to 'Edit', edit_venue_review_path(@venue_review) if can? :update, VenueReview %></strong></li>
-    <li><strong><%= link_to 'Back', venue_reviews_path %></strong></li>
-    </ul>
-
-  </div>
-
-</div>
+    <%= link_to 'Edit', edit_venue_review_path(@venue_review) if can? :update, VenueReview %>
+    <%= link_to 'Back', venue_reviews_path %>

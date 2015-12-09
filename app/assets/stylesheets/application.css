@@ -86,15 +86,10 @@
     background: url('https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/Nd62JHSuBhCJbgX/twostars.png') 0 -16px;
 }
 
-/*To see Nav bar before it becomes dropdown menu*/
-
 a {
-  color: white;
-  text-shadow: 1px 1px black;
+  color: black;
   text-decoration: none;
 }
-
-/*Remove the last 8 lines when drop down menu is made*/
 
 .container {
   width: 1080px;
@@ -105,6 +100,10 @@ a {
 .box {
   display: inline-block;
   margin-right: 0px;
+}
+
+.neg-margin-box {
+  margin-right: -4px;
 }
 
 .box-1 {
@@ -121,6 +120,7 @@ a {
 
 .box-4 {
   width: 33.3333333333%;  
+  z-index: 50;
 }
 
 .box-5 {
@@ -196,9 +196,37 @@ a {
 
 .navright {
   position: absolute;
-  top: -7px;
+  top: -20px;
   width: 100px;
   right: 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: rgba(255,255,255,0.75);
+  border: 1px solid black;
+  padding: 2px;
+  display: inline;
+  color: black;
+}
+
+li a {
+  color: black;
+}
+
+li:hover {
+  background-color: rgba(255,255,255,1);
+}
+
+.topmiddle {
+  position: relative;
+  width: 735px;
+  margin: 0 auto;
+  top: -75px;
 }
 
 .search_go {
@@ -254,14 +282,163 @@ img.bg {
 
 
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
+/* DROP DOWN MENU
+header{
+  width:240px;
+  height:50px;
+  position:relative;
+  left:39%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.75);
+  overflow:hidden;
+  backface-visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.7, 0.01, 0.3, 1); 
+  transition-delay: 400ms;
 }
 
-li {
-  display: inline;
+header.shownav{
+  width:240px;
+  height: 400px;
 }
+
+nav{
+  width: 50px;
+  height: 50px;
+  
+}
+
+.dc-menu-trigger {
+  position: absolute;
+  top: 0px;
+  left: 11px;
+  display: block;
+  width: 28px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 300000;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+  transition-delay: 600ms;
+}
+
+.dc-menu-trigger span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: -2px;
+  background-color: #000000;
+  font-size: 0px;
+  user-select: none;
+  transition: background-color 0.5s;
+}
+
+.dc-menu-open .dc-menu-trigger span {
+  background-color: transparent;
+}
+
+.dc-menu-open .dc-menu-trigger {
+  left:88%; 
+  transition: all 0.4s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+
+.dc-menu-trigger span:before,
+.dc-menu-trigger span:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  content: '';
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+
+.dc-menu-trigger span:before {
+  transform: translateY(-250%);
+}
+
+.dc-menu-trigger span:after {
+  transform: translateY(250%);
+}
+
+Just bust a move
+.dc-menu-open .dc-menu-trigger span:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.dc-menu-open .dc-menu-trigger span:after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+
+.dc-menu-close .dc-menu-trigger:before {
+  animation: plusVertical 0.3s ease forwards;
+}
+
+.dc-menu-close .dc-menu-trigger:after {
+  animation: plusHorizontal 0.3s ease forwards;
+}
+
+.menu-overlay {
+  z-index: 100000;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+.menu-overlay.open {
+  height: 100%;
+}
+
+.menu-overlay ul {
+  position: absolute;
+  visibility: hidden;
+  list-style-type:none;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle;
+  transition: all 0.6s cubic-bezier(0.7, 0, 0.36, 0.63);
+  transform: perspective(600px) rotateX(20deg) rotateY(-20deg);
+}
+
+.menu-overlay ul li{
+  text-align:center;
+  font-size: 12px;
+  margin:20px 0;
+  text-transform:uppercase;
+  letter-spacing:5px;
+}
+
+.menu-overlay ul li:after {
+  content:"";
+  display:block;
+  width:30px;
+  height:1px;
+  margin:10px auto 0 auto;
+}
+
+.menu-overlay ul li:hover {
+  background: rgba(255,255,255,1);
+  cursor:pointer;
+  height: 22px;
+}
+
+.menu-overlay.open ul {
+  top: 40px;
+  left:0;
+  visibility: visible;
+  margin-top: 0;
+  transform: perspective(600px) rotateX(0deg) rotateY(0deg);
+  transition: all 0.6s cubic-bezier(0.7, 0, 0.36, 0.63);
+  transition-delay: 400ms;
+}
+ DROP DOWN MENU */
 
 
 
@@ -302,14 +479,6 @@ li {
 
 
 
-nav {
-  margin: 0 auto;
-  width: 740px;
-}
-
-
-
-
 .password_inputs_longer {
   margin: 0 auto;
   width: 252px;
@@ -326,7 +495,25 @@ nav {
 
 
 
+.home_logo {
+  position: relative;
+  top: 80px;
+  width: 310px;
+  margin: 0 auto;
+}
 
+.home_motto {
+  position: relative;
+  top: 80px;
+  width: 241px;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.75);  
+  font-size: 20px;
+}
+
+.home_motto:hover {
+  color: rgba(255,255,255,1);
+}
 
 .s1_create_button {
   font-size: 15px;
@@ -538,7 +725,7 @@ nav {
 
 .new_show_review_center {
   margin: 0 auto;
-  width: 250px;
+  width: 204px;
 }
 
 .new_venue_review_button {
@@ -557,15 +744,8 @@ nav {
 
 .new_venue_review_center {
   margin: 0 auto;
-  width: 241px;
+  width: 204px;
 }
-
-
-
-
-
-
-
 
 .thumbnail {
   position: relative;
@@ -638,11 +818,46 @@ nav {
   background-color: rgba(192,192,192,0.75);
 }
 
+.show_info_area {
+  background-color: rgba(255,255,255,0.75);
+  color: black;
+  width: 864px;
+  height: 100%;
+  margin: 0 auto;
+}
 
+.show_info_area_left {
 
+}
 
+.show_info_area_right {
 
+}
 
+.show_info_area_button-edit {
+  background-color: rgba(192,192,192,0.5);
+  color: rgba(0,0,0,0.75);
+  border: none;
+}
+
+.show_info_area_button-edit:hover {
+  background-color: rgba(192,192,192,0.5)
+}
+
+.show_info_area_button-back {
+  background-color: rgba(192,192,192,0.5);
+  color: rgba(0,0,0,0.75);
+  border: none;
+}
+
+.show_info_area_button-back:hover {
+  background-color: rgba(192,192,192,0.5)
+}
+
+.notice-messages {
+  position: absolute;
+  bottom: -400px;
+}
 
 
 

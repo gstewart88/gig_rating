@@ -1,16 +1,10 @@
-<div>
-  <p><strong>Venue Name:</strong><%= @venue.name %></p>
+<%= @venue.name %>
+<%= link_to image_tag(@venue.venue_img.medium.url) %>
+<%= @venue.location %>
 
-  <p><%= link_to image_tag(@venue.venue_img.medium.url) %></p>
-
-  <p><strong>Location: </strong><%= @venue.location %></p>
-
-  <div class="menu">
-    <ul>
-    <li><strong><%= link_to 'Edit', edit_venue_path(@venue) if can? :update, Venue %></strong></li>
-    <li><strong><%= link_to 'Back', venues_path %></strong></li>
-    </ul>
-
+  <div style='width: 400px;'>
+    <div id="map-canvas" data-venue-id="<%= @venue.id  %>" style='width: 400px; height: 300px;'></div>
   </div>
-
-</div>
+  
+  <%= link_to 'Edit', edit_venue_path(@venue) if can? :update, Venue %>
+  <%= link_to 'Back', venues_path %>

@@ -5,70 +5,88 @@
   <%= stylesheet_link_tag    'application',  media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
+
+  <script src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyAvhtvLleDoIeay7mQKesQ48Yz8zd_Uk5g"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 </head>
 <body>
 
 
   <div class="container">
 
-    <div class="navleft">
-      <img src="/site_images/weview_logo.png" style="width:40%;height:40%">
-    </div>
+    <!-- <div class="navleft">
+       <header id="header">
+        <nav class="dc-menu">
+          <a href="#" class="dc-menu-trigger"><span>Menu</span></a>
+          <div class="menu-overlay">
+            <ul>
+              <li><%#= link_to "Home", root_path %></li>
+              <li><%#= link_to "Venues", venues_path %></li>
+              <li><%#= link_to "Shows", shows_path %></li>
+              <li><%#= link_to "Genres", genres_path %></li>
+              <li><%#= link_to "Performances", performances_path %></li>
+              <li><%#= link_to "Categories", categories_path %></li>
+              <li><%#= link_to "Show Reviews", show_reviews_path %></li>
+              <li><%#= link_to "Venue Reviews", venue_reviews_path %></li>
+            </ul>
+          </div>
+        </nav>
+      </header> 
+    </div>-->
 
     <div class="navmiddle">
       <%= render partial: "layouts/menu"%>
     </div>
-    
-    <div class="navright">
-      <div class="profilecircle">
-          <img src="/site_images/default-user-image.png" style="width:30%;height:30%;border-radius:50%;border:1px solid black">
-      </div>
+    <div class="topmiddle">
+      <nav>
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Genres", genres_path %></li>
+          <li><%= link_to "Performances", performances_path %></li>
+          <li><%= link_to "Categories", categories_path %></li>
+          <li><%= link_to "Show Reviews", show_reviews_path %></li>
+          <li><%= link_to "Venue Reviews", venue_reviews_path %></li>
+          <% if user_signed_in? %>
+          <li><%= link_to "Profile", user_path(current_user) %></li>
+          <li><%= link_to "Account", edit_user_registration_path %></li>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+          <li><%= link_to "Register", new_user_registration_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </nav>
     </div>
+
     
+    <div id="overlay"></div>
 
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Venues", venues_path %></li>
-        <li><%= link_to "Shows", shows_path %></li>
-        <li><%= link_to "Genres", genres_path %></li>
-        <li><%= link_to "Performances", performances_path %></li>
-        <li><%= link_to "Categories", categories_path %></li>
-        <li><%= link_to "Show Reviews", show_reviews_path %></li>
-        <li><%= link_to "Venue Reviews", venue_reviews_path %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "Profile", user_path(current_user) %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-        <li><%= link_to "Register", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% end %>
-      </ul>
-    </nav>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <div id="specialBox">
+      <p><%= render 'home/about_us' %></p> 
+      <button class='toggleOverlay'>Close</button>
+    </div>
+    <div id="specialBoxb">
+      <p><%= render 'home/privacy' %></p> 
+      <button data-b='b' class='toggleOverlay'>Close</button>
+    </div>
+    <div id="aboutUsBox">
+      <button class='toggleOverlay'>About Us</button>
+    </div>
 
-  <%= yield %>
+    <div id="privacyBox">
+      <button data-b='b' class='toggleOverlay'>Privacy</button>
+    </div>
 
-</div>
-<div id="overlay"></div>
 
-<div id="specialBox">
-  <p><%= render 'home/about_us' %></p> 
-  <button class='toggleOverlay'>Close</button>
-</div>
-<div id="specialBoxb">
-  <p><%= render 'home/privacy' %></p> 
-  <button data-b='b' class='toggleOverlay'>Close</button>
-</div>
-<div id="aboutUsBox">
-  <button class='toggleOverlay'>About Us</button>
-</div>
-
-<div id="privacyBox">
-  <button data-b='b' class='toggleOverlay'>Privacy</button>
-</div>
+    <br>
+    <%= yield %>
+    <br>
+    <div class="notice-messages">
+      <p class="notice" style="color:white;"><%= notice %></p>
+      <p class="alert" style="color:white;"><%= alert %></p>
+    </div>
+  </div>
 
 </body>
 </html>

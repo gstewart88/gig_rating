@@ -1,25 +1,24 @@
-<div class="box box-4 thumbnail">
+<div class="box neg-margin-box box-4 thumbnail">
 
   <div class="thumbnail-label">
-  <%= show_review.show.try(:name) %>
+    <%= show_review.title %><br>
+    <% (1..(show_review.rating)).each do  %>
+     <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - show_review.rating)).each do  %>
+     <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </div>
   <div class="thumbnail-sublabel">
-  <div class="thumbnail-sublabel-left">
-  <%= show_review.title %>
-  </div>
-  <div class="thumbnail-sublabel-right">
-
-  <% (1..(show_review.rating)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - show_review.rating)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
-
-  </div>
+    <div class="thumbnail-sublabel-left">
+      <%= show_review.show.try(:name) %>
+    </div>
+    <div class="thumbnail-sublabel-right">
+      <%= show_review.author %>
+    </div>
   </div>
   <%= image_tag show_review.show.try(:show_img).gridlist.url %>
-  <%= button_to('Show', show_review, method: :get, class: "thumbnail-buttons form-1") %>
-  <%= button_to('Edit', edit_show_review_path(show_review), method: :get, class: "thumbnail-buttons form-2") if can? :manage, ShowReview %>
   <%= button_to('Delete', show_review_path(show_review), method: :delete, data:{confirm: 'Delete the show_review? Are you sure?'}, class: "thumbnail-buttons form-3") if can? :delete, ShowReview %>
+  <%= button_to('Edit', edit_show_review_path(show_review), method: :get, class: "thumbnail-buttons form-2") if can? :manage, ShowReview %>
+  <%= button_to('Show', show_review, method: :get, class: "thumbnail-buttons form-1") %>
   </div>

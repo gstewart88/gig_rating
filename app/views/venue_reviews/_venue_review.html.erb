@@ -1,19 +1,25 @@
-<p><strong>Venue Name: </strong><%= venue_review.title %></p>
-<p><strong>Venue Review Title: </strong><%= venue_review.venue.try(:name) %></p>
-<p><strong>Venue Average Rating: </strong>
-<% (1..(venue_review.average_rating)).each do  %>
- <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-<% end %>
-<% (1..(5 - venue_review.average_rating)).each do  %>
- <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-<% end %>
-</p>
 
+<div class="box box-4 thumbnail">
 
-<div class="menu">
-  <ul>
-    <li><%= link_to('Show', venue_review, method: :get) %></li>
-    <li><%= button_to('Edit', edit_venue_review_path(venue_review), method: :get ) if can? :update, VenueReview %></li>
-    <li><%= button_to('Delete', venue_review_path(venue_review), method: :delete, data:{confirm: 'Delete the schedule? Are you sure?'}) if can? :delete, VenueReview %></li>
-  </ul>
+  <div class="thumbnail-label">
+    <%= venue_review.title %><br>
+    <% (1..(venue_review.average_rating)).each do  %>
+     <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - venue_review.average_rating)).each do  %>
+     <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
+  </div>
+  <div class="thumbnail-sublabel">
+    <div class="thumbnail-sublabel-left">
+      <%= venue_review.venue.try(:name) %>
+    </div>
+    <div class="thumbnail-sublabel-right">
+      <%= venue_review.author %>
+    </div>
+  </div>
+  <%= image_tag venue_review.venue.try(:venue_img).gridlist.url %>
+  <%= button_to('Delete', venue_review_path(venue_review), method: :delete, data:{confirm: 'Delete the schedule? Are you sure?'}, class: "thumbnail-buttons form-3") if can? :delete, VenueReview %>
+  <%= button_to('Edit', edit_venue_review_path(venue_review), method: :get, class: "thumbnail-buttons form-2") if can? :update, VenueReview %>
+  <%= button_to('Show', venue_review, method: :get, class: "thumbnail-buttons form-1") %>
 </div>
