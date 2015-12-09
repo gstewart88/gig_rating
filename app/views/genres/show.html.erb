@@ -1,6 +1,8 @@
 <img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
+<div class="show_info_area">
 <br>
 <h2><%= @genre.name %></h2>
 
 <%= link_to 'Edit', edit_genre_path(@genre) if can? :update, Genre %> |
 <%= link_to 'Back', genres_path %>
+</div>
