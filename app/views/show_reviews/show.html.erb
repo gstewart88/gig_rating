@@ -8,6 +8,7 @@
   <p><strong>Review: </strong><%= @show_review.description %></p>
 <% else %>
   <p><strong>Review: </strong><%= "#{@show_review.description[0...5]}..."  %></p>
+  <button id='read_more'>Read More</button>
 <% end %>
 
   <div class="menu">
