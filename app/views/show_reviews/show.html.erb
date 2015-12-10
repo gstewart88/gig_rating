@@ -18,7 +18,7 @@
     <p><%= "#{@show_review.description[0...5]}..."  %>
       <button id='read_more'>Read More</button></p>
       <% end %>
-      <p>Submitted by, <%= @show_review.user.try(:username) %> on <%= (@show_review.created_at).strftime("%d %B %Y") %></p>
+      <p>Submitted by <%= @show_review.user.try(:username) %> on <%= (@show_review.created_at).strftime("%d %B %Y") %></p>
 
       <%= link_to('Edit', edit_show_review_path(@show_review), class: "show_info_area_button-edit") if can? :manage, Show  %><%= link_to 'Back', show_reviews_path, class: "show_info_area_button-back" %>
 

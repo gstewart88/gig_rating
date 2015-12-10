@@ -788,6 +788,10 @@ Just bust a move
   height: 505px;
 }
 
+.sia_med {
+  height: 300px;
+}
+
 .show_info_area_left {
   position: absolute;
   top: 200px;
@@ -1098,8 +1102,5 @@ textarea {
   background-color: rgba(255,255,255,1);
 }
 
-
-
-
-
-
+.fixed_butts {
+}

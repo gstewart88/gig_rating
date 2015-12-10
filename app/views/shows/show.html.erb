@@ -1,6 +1,6 @@
 <img class="bg" src="<%= @show.show_img %>" alt="">
 <br>
-<div class="show_info_area sia_small">
+<div class="show_info_area sia_small sia_med">
   <div class="show_info_area_right">
     <%= link_to image_tag(@show.show_img.medium.url) %>
   </div>
@@ -9,9 +9,9 @@
   <h4> - <%= @show.category.try(:name) %></h4>
   <h5>  - <%= @show.category.try(:genre).try(:name) %></h5>
   </div>
-
-  <%= link_to('Edit', edit_show_path(@show), class: "show_info_area_button-edit") if can? :update, Show  %>
-  <%= link_to('Back', shows_path, class: "show_info_area_button-back") %>
+  <br>
+  <%= link_to('Edit', edit_show_path(@show), class: "show_info_area_button-edit fixed_butts") if can? :update, Show  %>
+  <%= link_to('Back', shows_path, class: "show_info_area_button-back fixed_butts") %>
     
 
   </div>
