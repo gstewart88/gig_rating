@@ -42,7 +42,7 @@ myMap.initialize = function(i) {
 
   var mapOptions = {
     center: {lat, lng},
-    zoom: 16,
+    zoom: 16
   };
   var map = new google.maps.Map(myMap.mapCanvas, mapOptions);
     // Marker Option
