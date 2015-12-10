@@ -170,7 +170,7 @@ a {
     display: inline-block;
     margin-right: -4px;
     vertical-align: top;
-    width: 49%;
+    width: 45%;
     text-align: right;
     padding-right: 2%;
 }
@@ -179,7 +179,7 @@ a {
   display: inline-block;
   margin-right: -4px;
   vertical-align: top;
-  width: 49%;
+  width: 45%;
 }
 
 .navleft {
@@ -777,6 +777,7 @@ Just bust a move
   width: 864px;
   height: 100%;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .show_info_area_left {
@@ -805,6 +806,85 @@ Just bust a move
 
 .show_info_area_button-back:hover {
   background-color: rgba(192,192,192,0.5)
+}
+
+.log_in_head {
+  width: 90px;
+  margin: 0 auto;
+}
+
+.login-col-left {
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+    width: 45%;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.login-col-right {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  width: 45%;
+}
+
+.login_remember_password {
+  width: 128px;
+  margin: 0 auto;
+}
+
+.log_in_button {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  color: black;
+  padding: 5px;
+  border: none;
+}
+
+.provider_log_in {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  color: black;
+  padding: 5px;
+  border: none;
+}
+
+.login_buttons {
+  text-align: center;
+}
+
+.forgot_password {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 11px;
+  color: black;
+  padding: 5px;
+  border: none;
+}
+
+.sign_up_button {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 11px;
+  color: black;
+  padding: 5px;
+  border: none;
+}
+
+
+.log_in_button:hover {
+  background-color: rgba(255,255,255,1)
+}
+
+.provider_log_in:hover {
+  background-color: rgba(255,255,255,1)
+}
+
+.forgot_password:hover {
+  background-color: rgba(255,255,255,1)
+}
+
+.sign_up_button:hover {
+  background-color: rgba(255,255,255,1)
 }
 
 .notice-messages {
