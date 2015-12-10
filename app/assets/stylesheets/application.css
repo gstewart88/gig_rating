@@ -456,6 +456,7 @@ Just bust a move
 }
 
 .editing_head {
+  text-align: center;
 }
 
 .home_logo {
@@ -783,6 +784,10 @@ Just bust a move
   width: 50%;
 }
 
+.sia_tall {
+  height: 505px;
+}
+
 .show_info_area_left {
   position: absolute;
   top: 200px;
@@ -795,7 +800,7 @@ Just bust a move
 }
 
 .show_info_area_button-edit {
-  background-color: rgba(192,192,192,0.5);
+  background-color: rgba(255,255,255,0.75);
   color: rgba(0,0,0,0.75);
   border: none;
   padding: 5px;
@@ -803,11 +808,11 @@ Just bust a move
 }
 
 .show_info_area_button-edit:hover {
-  background-color: rgba(192,192,192,0.75)
+  background-color: rgba(255,255,255,1)
 }
 
 .show_info_area_button-back {
-  background-color: rgba(192,192,192,0.5);
+  background-color: rgba(255,255,255,0.75);
   color: rgba(0,0,0,0.75);
   border: none;
   padding: 5px;
@@ -815,7 +820,7 @@ Just bust a move
 }
 
 .show_info_area_button-back:hover {
-  background-color: rgba(192,192,192,0.75)
+  background-color: rgba(255,255,255,1)
 }
 
 .log_in_head {
@@ -934,16 +939,113 @@ Just bust a move
   }
 
 
-.create_my_account_button {
+.create_my_account_button:hover {
     background-color: rgba(255,255,255,1)
 }
 
+.edit_profile_link {
+  background-color: rgba(192,192,192,0.5);
+  font-size: 13px;
+  width: 63px;
+  color: black;
+  padding: 5px;
+  border: none;
+  margin: 0 auto;
+}
 
+.edit_profile_link:hover {
+  background-color: rgba(192,192,192,0.75)
+}
 
+.higher_profile {
+  top: 130px;
+}
 
+.update_show_button {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  color: black;
+  padding: 5px;
+  border: none;
+  text-align: center;
+}
 
+.show_back_button {
+  background-color: rgba(192,192,192,0.5);
+  font-size: 13px;
+  color: black;
+  padding: 5px;
+  border: none;
+  position: absolute;
+  top: 110px;
+}
 
+.update_show_button:hover {
+  background-color: rgba(255,255,255,1);
+}
 
+.show_back_button:hover {
+  background-color: rgba(192,192,192,0.75);
+}
 
+.delete_account_button {
+  background-color: rgba(192,192,192,0.5);
+  font-size: 11px;
+  color: black;
+  padding: 5px;
+  border: none;
+  position: absolute;
+  top: -60px;
+  left: -120px;
+}
 
+.delete_account_button:hover {
+  background-color: rgba(192,192,192,0.75);
+}
 
+.back_profile_button {
+  background-color: rgba(192,192,192,0.5);
+  font-size: 13px;
+  color: black;
+  padding: 5px;
+  border: none;
+  position: absolute;
+  top: 110px;
+  left: 105px;
+}
+
+.back_profile_button:hover {
+  background-color: rgba(192,192,192,0.75);
+}
+
+.update_account_button {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  color: black;
+  padding: 5px;
+  border: none;
+  text-align: center;
+}
+
+.update_account_button:hover {
+  background-color: rgba(255,255,255,1);
+}
+
+.show_venue_content {
+  position: absolute;
+  width: 360px;
+  top: -75px;
+  left: -100px;
+}
+
+.venue_location_section {
+  position: absolute;
+  bottom: -400px;
+  left: -100px;
+}
+
+.venue_show_buttons {
+  position: fixed;
+  bottom: 60px;
+  right: 220px;
+}

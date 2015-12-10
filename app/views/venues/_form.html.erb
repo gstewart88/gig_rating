@@ -1,14 +1,31 @@
 <%= form_for(@venue) do |f| %>
-<%= f.label :name, 'Venue Name:' %>
-<%= f.text_field :name %><br />
-<%= f.label :location, 'Location:' %>
-<%= f.text_field :location %><br />
-<%= f.label :venue_img, 'Venue Image' %>
-<%= f.file_field :venue_img %><br />
-</br>
-<div class="actions">
-  <%= f.submit %>
+<div class="form-col-left">
+  <%= f.label :name, 'Venue Name:' %>
 </div>
+<div class="form-col-right">
+  <%= f.text_field :name %>
+</div>
+<br>
+<br>
+<div class="form-col-left">
+  <%= f.label :location, 'Location:' %>
+</div>
+<div class="form-col-right">
+  <%= f.text_field :location %>
+</div>
+<br>
+<br>
+<div class="form-col-left">
+  <%= f.label :venue_img, 'Venue Image' %>
+</div>
+<div class="form-col-right">
+  <%= f.file_field :venue_img %>
+</div>
+<br>
+<br>
+<center>
+<%= f.submit "Complete", class: "update_show_button"  %>
+</center>
 
 <% end %>
 

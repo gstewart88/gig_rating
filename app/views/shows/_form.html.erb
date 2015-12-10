@@ -1,15 +1,35 @@
 <%= form_for(@show) do |f| %>
+<div class="form-col-left">
 <%= f.label :name, 'Show Name:' %>
-<%= f.text_field :name %><br />
-<%= f.label :category_id %>
-<%= f.select :category_id, Category.all.map { |c| [c.name, c.id] } %><br />
-<%= f.label :date, 'Date:' %>
-<%= f.datetime_select :date %><br />
-<%= f.label :show_img, 'Show Image' %>
-<%= f.file_field :show_img %><br />
-</br>
-<div class="actions">
-  <%= f.submit %>
 </div>
-
+<div class="form-col-right">
+<%= f.text_field :name %>
+</div>
+<br>
+<br>
+<div class="form-col-left">
+<%= f.label :category_id %>
+</div>
+<div class="form-col-right">
+<%= f.select :category_id, Category.all.map { |c| [c.name, c.id] } %>
+</div>
+<br>
+<br>
+<div class="form-col-left">
+<%= f.label :date, 'Date:' %>
+</div>
+<div class="form-col-right">
+<%= f.datetime_select :date %>
+</div>
+<br>
+<br>
+<div class="form-col-left">
+<%= f.label :show_img, 'Show Image' %>
+</div>
+<div class="form-col-right">
+<%= f.file_field :show_img %>
+</div>
+<br>
+<br>
+  <center><%= f.submit "Complete", class: "update_show_button" %></center>
 <% end %>
