@@ -1,8 +1,7 @@
 <img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
 <div class="show_info_area">
-<br>
-<%= @venue_review.title %>
-<%= @venue_review.venue.name %>
+
+<h1><%= @venue_review.title %></h1>
 
   <% if user_signed_in? %>
     <%= @venue_review.description %>
@@ -10,6 +9,9 @@
     <%= "#{@venue_review.description[0...5]}..."  %>
     <button id='read_more'>Read More</button>
   <% end %>
+  <br>
+  <br>
+  <strong>Where?</strong> <%= @venue_review.venue.name %>
 
   <p><strong>Accessibility: </strong>
   <% (1..(@venue_review.accessibility)).each do  %>
