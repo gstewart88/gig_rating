@@ -135,16 +135,20 @@ u3 = User.create!(email: "syed@syed.com", username:"infinite_syed", password: "p
 
 ShowReview.delete_all
 
-ShowReview.create!(title: "Dave Grohl headbangs atop a custom mechanised throne", show: s15, description: "In a year of well-publicised stage accidents, from Florence Welch’s foot injury to the Edge’s walk off the edge, Dave Grohl’s leg break in Gothenburg has had the most serious consequences, among which rescheduling several European stadium dates wasn’t even the worst. Unable to atone for cancelling their headline slot at Glastonbury, at least until next year, the Foo Fighters tonight turn their attentions to making it up to patient fans in Edinburgh, whose compensation is a furious and amusingly odd collector’s item of a show.", rating: "4", user_id: u1)
-
-ShowReview.create!(title: "Ellie Goulding's is a beast", show: s13, description: "Ellie Goulding has come a very long way from her acoustic strumming and trilling Herefordshire origins. In a skin-toned body suit and with a giant mane of blonde hair extensions cascading over black shaggy epaulettes, she bestrode the O2 Arena stage like a sci-fi warrior as digital interstellar explosions erupted on screens amid thunderous blasts of synthetic sound. All hail Barbarellie, queen of galactic pop.", rating: "5", user_id: u2)
-
-ShowReview.create!(title: "Valjean. At last. We see each other plain", show: s4, description: "If I could, I would get this entire show tattooed on my retinas", rating: "5", user_id: u2)
-
+ShowReview.create!(title: "Dave Grohl headbangs atop a custom mechanised throne", show: s15, description: "In a year of well-publicised stage accidents, from Florence Welch’s foot injury to the Edge’s walk off the edge, Dave Grohl’s leg break in Gothenburg has had the most serious consequences, among which rescheduling several European stadium dates wasn’t even the worst. Unable to atone for cancelling their headline slot at Glastonbury, at least until next year, the Foo Fighters tonight turn their attentions to making it up to patient fans in Edinburgh, whose compensation is a furious and amusingly odd collector’s item of a show.", rating: "4", user: u1)
+ShowReview.create!(title: "Ellie Goulding is a beast", show: s13, description: "Ellie Goulding has come a very long way from her acoustic strumming and trilling Herefordshire origins. In a skin-toned body suit and with a giant mane of blonde hair extensions cascading over black shaggy epaulettes, she bestrode the O2 Arena stage like a sci-fi warrior as digital interstellar explosions erupted on screens amid thunderous blasts of synthetic sound. All hail Barbarellie, queen of galactic pop.", rating: "5", user: u2)
+ShowReview.create!(title: "Valjean. At last. We see each other plain", show: s4, description: "If I could, I would get this entire show tattooed on my retinas", rating: "5", user: u2)
 ShowReview.create!(title: "We will rock you...they certainly do!", show: s9, description: "Great night out, really enjoyed this musical, I think maybe you need to be a Queen fan (which I am) to thoroughly enjoy it.
 The staging is quite minimal in the first half with the visuals mostly by the cast rather than the setting, good use of technology throughout, very powerful voices and lots of energy, we both enjoyed the second half more.
 Everyone was good but I really enjoyed the performances by Scaramouche, the Killer Queens No1 man (sorry name escapes me) and Pop. Our show had three understudies in situ but I can't remember who they were and it didn't matter to me! Check before hand if you are going for a particular performer.
-The Killer Queen had a strong voice but personally I didn't resonate with her character.", rating: "5", user_id: u3)
+The Killer Queen had a strong voice but personally I didn't resonate with her character.", rating: "5", user: u3)
+
+VenueReview.delete_all
+
+VenueReview.create!(title: "Lovely Theatre", venue: v1, description: "We came here to see Mathew Bourne's Sleeping Beauty Ballet. First time in this theatre, very nice all round. Clean and decor is in keeping with the Theatre. I don't like how you get your wine or drinks served out of plastic cups at the bar.", user: u3, accessibility: "4", acoustics: "3", cleanliness: "5", lighting: "4", location: "4", parking: "2", seating: "2")
+VenueReview.create!(title: "Nice place", venue: v5, description: "Everything was so easy from the ordering of the tickets, picking them up at the box office and getting to our seats. A few glass bottles of beer were allowed in which was surprising although our drinks were in plastic glasses. ", user: u1, accessibility: "4", acoustics: "3", cleanliness: "2", lighting: "5", location: "4", parking: "3", seating: ""2)
+VenueReview.create!(title: "Lovely theatre, touch of vertigo", venue: v4, description: "This is a beautiful theatre with comfy seats and a lovely chandelier. My problem was going for the cheaper seats in the Upper Circle. It was pretty high up and I felt a bit dizzy whilst walking to my seat. I won't be so mean next time and will go for seats further down.", user: u2, accessibility: "2", acoustics: "4", cleanliness: "4", lighting: "3", location: "4", parking: "2", seating: "1")
+
 
 
 
