@@ -1,5 +1,5 @@
 
-<div class="box box-4 thumbnail">
+<div class="box box-4 thumbnail neg-margin-box">
 
   <div class="thumbnail-label">
     <%= venue_review.title %><br>
@@ -15,7 +15,7 @@
       <%= venue_review.venue.try(:name) %>
     </div>
     <div class="thumbnail-sublabel-right">
-      <%= venue_review.author %>
+      <%= venue_review.user.try(:username) %>
     </div>
   </div>
   <%= image_tag venue_review.venue.try(:venue_img).gridlist.url %>

@@ -446,8 +446,7 @@ Just bust a move
 }
 
 .registration_links {
-  margin: 0 auto;
-  width: 157px;
+  text-align: center;
 }
 
 .password_inputs_longer {
@@ -780,32 +779,43 @@ Just bust a move
   padding: 10px;
 }
 
-.show_info_area_left {
+.sia_small {
+  width: 50%;
+}
 
+.show_info_area_left {
+  position: absolute;
+  top: 200px;
+  left: 300px;
 }
 
 .show_info_area_right {
-
+  position: relative;
+  text-align: right;
 }
 
 .show_info_area_button-edit {
   background-color: rgba(192,192,192,0.5);
   color: rgba(0,0,0,0.75);
   border: none;
+  padding: 5px;
+  font-size: 12px;
 }
 
 .show_info_area_button-edit:hover {
-  background-color: rgba(192,192,192,0.5)
+  background-color: rgba(192,192,192,0.75)
 }
 
 .show_info_area_button-back {
   background-color: rgba(192,192,192,0.5);
   color: rgba(0,0,0,0.75);
   border: none;
+  padding: 5px;
+  font-size: 12px;
 }
 
 .show_info_area_button-back:hover {
-  background-color: rgba(192,192,192,0.5)
+  background-color: rgba(192,192,192,0.75)
 }
 
 .log_in_head {
@@ -893,12 +903,12 @@ Just bust a move
 }
 
 .footerboxes {
-  position: relative;
+  position: fixed;
   display: inline-block;
   width: 65px;
   margin: 0 auto;
-  bottom: -515px;
-  right: -1100px;
+  bottom: 20px;
+  right: 30px;
 }
 
 .aboutUsBox {
@@ -911,9 +921,22 @@ Just bust a move
   color: rgba(0,0,0,0.75);
 }
 
+.log_in_links {
+  text-align: center;
+}
+
+.create_my_account_button {
+    background-color: rgba(255,255,255,0.75);
+    font-size: 13px;
+    color: black;
+    padding: 5px;
+    border: none;
+  }
 
 
-
+.create_my_account_button {
+    background-color: rgba(255,255,255,1)
+}
 
 
 
