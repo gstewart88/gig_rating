@@ -19,9 +19,12 @@ class ShowReviewsController < ApplicationController
     @show_review = ShowReview.new(show_review_params)
     @show_review.user = current_user
 
+
     respond_to do |format|
       if @show_review.save
         format.html { redirect_to @show_review, notice: 'Show Review was successfully created.' }
+        @show_review.user.ranking = (@show_review.user.ranking+1)
+        current_user.save!
       else
         format.html { render :new }
       end
