@@ -7,6 +7,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'jquery-turbolinks'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
