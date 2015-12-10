@@ -53,7 +53,7 @@ g45=Genre.create!(name: "Reggae", live_music: true)
 g46=Genre.create!(name: "Latino", live_music: true)
 g47=Genre.create!(name: "Punk", live_music: true)
 g48=Genre.create!(name: "Funk", live_music: true)
-g49=Genre.create!(name: "Romance", live_music: true)
+g49=Genre.create!(name: "Rap", live_music: true)
 g50=Genre.create!(name: "Classical", live_music: true)
 g51=Genre.create!(name: "Comedy", live_music: true)
 g52=Genre.create!(name: "Kids", live_music: true)
@@ -73,6 +73,11 @@ c9 = Category.create!(name: "One Person", genre: g19)
 c10 = Category.create!(name: "Ballet", genre: g7)
 c11 = Category.create!(name: "Drama", genre: g14)
 c12 = Category.create!(name: "Theatre", genre: g5)
+c13 = Category.create!(name: "Live Music", genre: g28)
+c14 = Category.create!(name: "Live Music", genre: g47)
+c15 = Category.create!(name: "Live Music", genre: g25)
+c16 = Category.create!(name: "Live Music", genre: g49)
+c17 = Category.create!(name: "Live Music", genre: g29)
 
 
 
@@ -86,7 +91,12 @@ s6 = Show.create!(name: "The Lion King", show_img: File.open(File.join(Rails.roo
 s7 = Show.create!(name: "The Phantom of The Opera", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/ThePhantomofTheOpera.png")), category: c2)
 s8 = Show.create!(name: "The Wizard of Oz", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/TheWizardofOz.jpg")), category: c12)
 s9 = Show.create!(name: "We Will Rock You", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/WeWillRockYou.jpg")), category: c3)
-s10 = Show.create!(name: "Wicked", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/Wicked.jpg")), category: c12)
+s10 = Show.create!(name: "Kanye West", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/KanyeWest.jpg")), category: c16)
+s11 = Show.create!(name: "Linkin Park", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/LinkinPark.jpg")), category: c13)
+s12 = Show.create!(name: "Taylor Swift", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/TaylorSwift.jpg")), category: c15)
+s13 = Show.create!(name: "Ellie Goulding", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/EllieGoulding.jpg")), category: c15)
+s14 = Show.create!(name: "Weezer", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/Weezer.jpg")), category: c17)
+s15 = Show.create!(name: "Foo Fighters", show_img: File.open(File.join(Rails.root,"/public/WeView/Shows/FooFighters.jpg")), category: c13)
 
 
 Venue.delete_all
@@ -96,6 +106,10 @@ v3 = Venue.create!(name: 'Festival Theatre', location: 'Edinburgh', venue_img: F
 v4 = Venue.create!(name: 'The Lyceum', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Lyceum.jpg")))
 v5 = Venue.create!(name: 'Edinburgh Playhouse', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Playhouse.jpg")))
 v6 = Venue.create!(name: 'Edinburgh Traverse Theatre', location: 'Edinburgh', venue_img: File.open(File.join(Rails.root,"/public/WeView/EdinburghTheatres/Traverse.jpg")))
+v7 = Venue.create!(name: 'The SSE Hydro', location: 'Glasgow', venue_img: File.open(File.join(Rails.root,"/public/WeView/GlasgowTheatres/hydro.jpg")))
+v8 = Venue.create!(name: 'Barrowland Ballroom', location: 'Glasgow', venue_img: File.open(File.join(Rails.root,"/public/WeView/GlasgowTheatres/barrowland.jpg")))
+v9 = Venue.create!(name: 'King Tuts Wah Wah Hut', location: 'Glasgow', venue_img: File.open(File.join(Rails.root,"/public/WeView/GlasgowTheatres/kingtuts.jpg")))
+
 
 Performance.delete_all
 # a = DateTime.new(2015,11,20,17,00).strftime(%A, %d %b %Y %I:%M %p)
@@ -108,16 +122,31 @@ Performance.create!(show: s6, venue: v6, date: (DateTime.new(2015,12,21,17,00)))
 Performance.create!(show: s7, venue: v1, date: (DateTime.new(2015,12,22,17,00)))
 Performance.create!(show: s8, venue: v2, date: (DateTime.new(2015,12,22,17,00)))
 Performance.create!(show: s9, venue: v3, date: (DateTime.new(2015,12,22,17,00)))
-
-
-
-
+Performance.create!(show: s13, venue: v5, date: (DateTime.new(2015,12,22,17,00)))
+Performance.create!(show: s13, venue: v7, date: (DateTime.new(2015,12,22,17,00)))
 
 
 User.delete_all
 
-User.create!(email: "simon@simon.com", password: "password", role: Role.find_by(name: 'admin'))
-User.create!(email: "graeme@graeme.com", password: "password")
-User.create!(email: "syed@syed.com", password: "password")
+u1 = User.create!(email: "simon@simon.com", username:"osborne1992", password: "password", role: Role.find_by(name: 'admin'))
+u2 = User.create!(email: "graeme@graeme.com", username:"graemes88", password: "password", role: Role.find_by(name: 'registered'))
+u3 = User.create!(email: "syed@syed.com", username:"infinite_syed", password: "password", role: Role.find_by(name: 'registered'))
+
+
+ShowReview.delete_all
+
+ShowReview.create!(title: "Dave Grohl headbangs atop a custom mechanised throne", show: s15, description: "In a year of well-publicised stage accidents, from Florence Welch’s foot injury to the Edge’s walk off the edge, Dave Grohl’s leg break in Gothenburg has had the most serious consequences, among which rescheduling several European stadium dates wasn’t even the worst. Unable to atone for cancelling their headline slot at Glastonbury, at least until next year, the Foo Fighters tonight turn their attentions to making it up to patient fans in Edinburgh, whose compensation is a furious and amusingly odd collector’s item of a show.", rating: "4", user_id: u1)
+
+ShowReview.create!(title: "Ellie Goulding's is a beast", show: s13, description: "Ellie Goulding has come a very long way from her acoustic strumming and trilling Herefordshire origins. In a skin-toned body suit and with a giant mane of blonde hair extensions cascading over black shaggy epaulettes, she bestrode the O2 Arena stage like a sci-fi warrior as digital interstellar explosions erupted on screens amid thunderous blasts of synthetic sound. All hail Barbarellie, queen of galactic pop.", rating: "5", user_id: u2)
+
+ShowReview.create!(title: "Valjean. At last. We see each other plain", show: s4, description: "If I could, I would get this entire show tattooed on my retinas", rating: "5", user_id: u2)
+
+ShowReview.create!(title: "We will rock you...they certainly do!", show: s9, description: "Great night out, really enjoyed this musical, I think maybe you need to be a Queen fan (which I am) to thoroughly enjoy it.
+The staging is quite minimal in the first half with the visuals mostly by the cast rather than the setting, good use of technology throughout, very powerful voices and lots of energy, we both enjoyed the second half more.
+Everyone was good but I really enjoyed the performances by Scaramouche, the Killer Queens No1 man (sorry name escapes me) and Pop. Our show had three understudies in situ but I can't remember who they were and it didn't matter to me! Check before hand if you are going for a particular performer.
+The Killer Queen had a strong voice but personally I didn't resonate with her character.", rating: "5", user_id: u3)
+
+
+
 
 
