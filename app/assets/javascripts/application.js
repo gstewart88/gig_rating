@@ -21,7 +21,7 @@ function toggleOverlay(b){
   var overlay = document.getElementById('overlay');
   var specialBox = document.getElementById('specialBox' + b);
   console.log(b);
-  overlay.style.opacity = .8;
+  overlay.style.opacity = 0.8;
   if(overlay.style.display == "block"){
     overlay.style.display = "none";
     specialBox.style.display = "none";
@@ -41,7 +41,7 @@ myMap.initialize = function(i) {
   var lng = parseFloat(lngs[i]);
 
   var mapOptions = {
-    center: {lat, lng},
+    center: {lat: lat, lng: lng},
     zoom: 16
   };
   var map = new google.maps.Map(myMap.mapCanvas, mapOptions);
