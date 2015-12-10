@@ -22,6 +22,8 @@ class VenueReviewsController < ApplicationController
     respond_to do |format|
       if @venue_review.save
         format.html { redirect_to @venue_review, notice: 'Venue Review was successfully created.' }
+        @venue_review.user.ranking = (@venue_review.user.ranking+1)
+        current_user.save!
       else
         format.html { render :new }
       end
