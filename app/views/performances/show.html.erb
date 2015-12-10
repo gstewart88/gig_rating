@@ -12,10 +12,7 @@
   <p><strong>Schedule: </strong><%= @performance.human_readable_date %></p>
   <br>
 
-  <div>
-      <li><strong><%= link_to 'Back', performances_path %></strong></li>
-      <li><strong><%= link_to 'Edit', edit_performance_path(@performance) if can? :update, Performance%></strong></li>
-  </div>
+<%= link_to 'Back', performances_path, class: "show_info_area_button-back" %><%= link_to('Edit', edit_performance_path(@performance), class: "show_info_area_button-edit") if can? :update, Performance%>
 
 </div>
 </div>

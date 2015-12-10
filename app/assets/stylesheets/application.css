@@ -958,7 +958,7 @@ Just bust a move
 }
 
 .higher_profile {
-  top: 130px;
+  top: 200px;
 }
 
 .update_show_button {
@@ -1049,3 +1049,57 @@ Just bust a move
   bottom: 60px;
   right: 220px;
 }
+
+.reviews_back_button {
+  background-color: rgba(192,192,192,0.5);
+  font-size: 13px;
+  color: black;
+  padding: 5px;
+  border: none;
+  position: absolute;
+  top: 150px;
+  left: 265px;
+}
+
+.reviews_back_button:hover {
+  background-color: rgba(192,192,192,0.75);
+}
+
+textarea {
+    width: 530px;
+    height: 150px;
+}
+
+.new_review_top {
+  display: inline-block;
+  background-color: rgba(255,255,255,0.75);
+  font-size: 15px;
+  color: black;
+  width: 100%;
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-left: -10px;
+  border: 1px solid black;
+}
+
+.new_review_top:hover {
+  background-color: rgba(255,255,255,1);
+}
+
+.create_review_button {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  color: black;
+  padding: 5px;
+  border: none;
+}
+
+.create_review_button:hover {
+  background-color: rgba(255,255,255,1);
+}
+
+
+
+
+
+

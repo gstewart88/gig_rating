@@ -1,9 +1,13 @@
 <img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
 <br>
-<h1>New Venue Review</h1>
+<div class="show_info_area sia_small">
+<center><%= link_to 'New Show Review', new_show_review_path, class: "new_review_top" %></center>
+
+<div class="editing_head">
+<h1>Writing Venue Review</h1>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', venue_reviews_path %>
-<%= link_to 'New Show Review', new_show_review_path %>
+<%= link_to 'Back', venue_reviews_path, class: "reviews_back_button" %>
 </div>

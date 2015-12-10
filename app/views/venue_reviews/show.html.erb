@@ -1,82 +1,85 @@
-<img class="bg" src="http://i252.photobucket.com/albums/hh27/OZ-Insanity/theater_zpstxpof3ik.jpg" alt="">
-<div class="show_info_area">
-
-<h1><%= @venue_review.title %></h1>
-
+<img class="bg" src="<%= @venue_review.venue.venue_img %>" alt="">
+<div class="show_info_area sia_small">
+  <br>
+  <h3><%= @venue_review.title %></h3>
+  <p><%= @venue_review.venue.name %></p>
   <% if user_signed_in? %>
-    <%= @venue_review.description %>
+  <%= @venue_review.description %>
   <% else %>
-    <%= "#{@venue_review.description[0...5]}..."  %>
-    <button id='read_more'>Read More</button>
+  <%= "#{@venue_review.description[0...5]}..."  %>
+  <button id='read_more'>Read More</button>
   <% end %>
   <br>
   <br>
-  <strong>Where?</strong> <%= @venue_review.venue.name %>
 
-  <p><strong>Accessibility: </strong>
-  <% (1..(@venue_review.accessibility)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - @venue_review.accessibility)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
+  <div class="form-col-left">
+    <strong>Accessibility: </strong>
+    <% (1..(@venue_review.accessibility)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - @venue_review.accessibility)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </p>
   <p><strong>Acoustics: </strong>
-  <% (1..(@venue_review.acoustics)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - @venue_review.acoustics)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
+    <% (1..(@venue_review.acoustics)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - @venue_review.acoustics)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </p>
   <p><strong>Cleanliness: </strong>
-  <% (1..(@venue_review.cleanliness)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - @venue_review.cleanliness)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
+    <% (1..(@venue_review.cleanliness)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - @venue_review.cleanliness)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </p>
   <p><strong>Lighting: </strong>
-  <% (1..(@venue_review.lighting)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - @venue_review.lighting)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
+    <% (1..(@venue_review.lighting)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - @venue_review.lighting)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </p>
+  </div>
+  <div class="form-col-right">
   <p><strong>Location: </strong>
-  <% (1..(@venue_review.location)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - @venue_review.location)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
+    <% (1..(@venue_review.location)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - @venue_review.location)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </p>
   <p><strong>Parking: </strong>
-  <% (1..(@venue_review.parking)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - @venue_review.parking)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
+    <% (1..(@venue_review.parking)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - @venue_review.parking)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </p>
   <p><strong>Seating: </strong>
-  <% (1..(@venue_review.seating)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - @venue_review.seating)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
+    <% (1..(@venue_review.seating)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - @venue_review.seating)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
   </p>
-  <p><strong>Average Rating: </strong>
-  <% (1..(@venue_review.average_rating)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
-  <% end %>
-  <% (1..(5 - @venue_review.average_rating)).each do  %>
-   <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
-  <% end %>
-  </p>
-    <%= link_to 'Edit', edit_venue_review_path(@venue_review) if can? :update, VenueReview %>
-    <%= link_to 'Back', venue_reviews_path %>
-    </div>
+  </div>
+  <center><p><strong>Average Rating: </strong>
+    <% (1..(@venue_review.average_rating)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/R2CuT5tfe09UFZq/twostars%20-%20solo%20full.png' %>
+    <% end %>
+    <% (1..(5 - @venue_review.average_rating)).each do  %>
+    <%= image_tag 'https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/407672/2786203/CNHbLD4LjJuoFQz/twostars%20-%20solo%20empty.png' %>
+    <% end %>
+  </p></center>
+  <p>Submitted by, <%= @venue_review.user.try(:username) %> on <%= (@venue_review.created_at).strftime("%d %B %Y") %></p>
+  <%= link_to('Edit', edit_venue_review_path(@venue_review), class: "show_info_area_button-edit") if can? :update, VenueReview %><%= link_to 'Back', venue_reviews_path, class: "show_info_area_button-back" %>
+</div>

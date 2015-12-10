@@ -1,10 +1,26 @@
 <%= form_for(@venue_review) do |f| %>
+<div class="review-col-left">
 <%= f.label :title, 'Review Title:' %>
-<%= f.text_field :title %><br />
+</div>
+<div class="review-col-right">
+<%= f.text_field :title, :size=>"88" %>
+</div>
+<br>
+<div class="review-col-left">
 <%= f.label :venue_id %>
-<%= f.select :venue_id, Venue.all.map { |c| [c.name, c.id] } %><br />
+</div>
+<div class="review-col-right">
+<%= f.select :venue_id, Venue.all.map { |c| [c.name, c.id] } %>
+</div>
+<br>
+<div class="review-col-left">
 <%= f.label :description, 'Review:' %>
-<%= f.text_field :description, :size=>"50",:maxlength=>"300" %><br />
+</div>
+<div class="review-col-right">
+<%= f.text_area :description %>
+</div>
+<br>
+<div class="form-col-left">
 Accessibility
 <span class="rating">
   <% (1..5).to_a.reverse.each do |accessibility| %>
@@ -33,6 +49,8 @@ Lighting
     <%= f.label "lighting_#{lighting}", nil, class: 'rating-star' %>
   <% end %>
 </span><br />
+</div>
+<div class="form-col-right">
 Location
 <span class="rating">
   <% (1..5).to_a.reverse.each do |location| %>
@@ -54,7 +72,8 @@ Seating
     <%= f.label "seating_#{seating}", nil, class: 'rating-star' %>
   <% end %>
 </span><br />
-  <%= f.submit %>
+</div>
+  <center><%= f.submit "Complete", class: "create_review_button" %></center>
 </div>
 
 <% end %>
