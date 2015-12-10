@@ -1,23 +1,37 @@
-<div>
 <%= form_for(@show_review) do |f| %>
+<div class="review-col-left">
 <%= f.label :title, 'Review Title:' %>
-<%= f.text_field :title %><br />
+</div>
+<div class="review-col-right">
+<%= f.text_field :title, :size=>"88" %>
+</div>
+<br>
+<div class="review-col-left">
 <%= f.label :show_id %>
-<%= f.select :show_id, Show.all.map { |c| [c.name, c.id] } %><br />
+</div>
+<div class="review-col-right">
+<%= f.select :show_id, Show.all.map { |c| [c.name, c.id] } %>
+</div>
+<br>
+<div class="review-col-left">
 <%= f.label :description, 'Review:' %>
-<%= f.text_field :description %><br />
+</div>
+<div class="review-col-right">
+<%= f.text_area :description %>
+</div>
 
 
-Rating
-<span class="rating">
-  <% (1..5).to_a.reverse.each do |rating| %>
-    <%= f.radio_button :rating, rating, class: 'rating-input' %>
-    <%= f.label "rating_#{rating}", nil, class: 'rating-star' %>
-  <% end %>
-</span>
+<center>
+  Rating
+    <span class="rating">
+      <% (1..5).to_a.reverse.each do |rating| %>
+        <%= f.radio_button :rating, rating, class: 'rating-input' %>
+        <%= f.label "rating_#{rating}", nil, class: 'rating-star' %>
+      <% end %>
+    </span>
 
 <br />
-  <%= f.submit %>
+  <%= f.submit "Complete", class: "create_review_button" %>  </center>
 </div>
 
 <% end %>

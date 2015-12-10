@@ -5,9 +5,9 @@
 <img src="/site_images/default-user-image.png" style="width:50%;border-radius:50%;">
 </div>
 <div class="show_info_area_left higher_profile">
-<p><h4>Username: </h4><%= current_user.username %></p>
-<p><h4>Name: </h4><%= current_user.name %></p>
-<p><h4>Email: </h4><%= current_user.email %></p>
+<p><strong>Username: </strong><%= current_user.username %></p>
+<p><strong>Name: </strong><%= current_user.name %></p>
+<p><strong>Email: </strong><%= current_user.email %></p>
 </div>
 <%= current_user.try(:location) %>
 <div class="edit_profile_link">
