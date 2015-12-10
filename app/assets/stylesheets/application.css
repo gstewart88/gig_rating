@@ -814,21 +814,20 @@ Just bust a move
 
 .footerboxes {
   position: relative;
-  display: inline;
-  width: 120px;
+  display: inline-block;
+  width: 65px;
   margin: 0 auto;
-  bottom: -545px;
+  bottom: -515px;
+  right: -1100px;
 }
 
 .aboutUsBox {
-
-  background-color: rgba(192,192,192,0.5);
+  position: relative;
   color: rgba(0,0,0,0.75);
 }
 
 .privacyBox {
-
-  background-color: rgba(192,192,192,0.5);
+  position: relative;
   color: rgba(0,0,0,0.75);
 }
 
