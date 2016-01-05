@@ -16,62 +16,71 @@
   <div class="container">
 
     <div class="navleft">
-      <img src="/site_images/weview_logo.png" style="width: 45%">
+      <%= link_to image_tag("/site_images/weview_logo.png", :width=> '45%'), root_path %>
     </div>
 
     <div class="navmiddle">
       <%= render partial: "layouts/menu"%>
     </div>
     <div class="topmiddle">
-    <nav>
+      <% if user_signed_in? %>
+      <nav class="logged-in">
+        <ul>
+          <li><%= link_to "Shows", shows_path %></li>
+          <li><%= link_to "Venues", venues_path %></li>
+          <li><%= link_to "Performances", performances_path %></li>
+          <li><%= link_to "Show Reviews", show_reviews_path %></li>
+          <li><%= link_to "Venue Reviews", venue_reviews_path %></li>
+          <li><%= link_to "Profile", user_path(current_user) %></li>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </nav>
+      <% else %>
+    <nav class="logged-out">
       <ul>
-        <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Shows", shows_path %></li>
         <li><%= link_to "Venues", venues_path %></li>
         <li><%= link_to "Performances", performances_path %></li>
         <li><%= link_to "Show Reviews", show_reviews_path %></li>
         <li><%= link_to "Venue Reviews", venue_reviews_path %></li>
-        <% if user_signed_in? %>
-        <li><%= link_to "Profile", user_path(current_user) %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
         <li><%= link_to "Register", new_user_registration_path %></li>
         <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% end %>
       </ul>
     </nav>
-    </div>
-
-    
-    <div id="overlay"></div>
-
-    <div id="specialBox">
-      <p><%= render 'home/about_us' %></p> 
-      <button class='toggleOverlay'>Close</button>
-    </div>
-    <div id="specialBoxb">
-      <p><%= render 'home/privacy' %></p> 
-      <button data-b='b' class='toggleOverlay'>Close</button>
-    </div>
-    <div class="footerboxes">
-    <p><div id="aboutUsBox" class="aboutUsBox">
-      <button class='toggleOverlay'>About Us</button>
-    </div>
-
-    <div id="privacyBox" class="privacyBox">
-      <button data-b='b' class='toggleOverlay'>Privacy</button>
-    </div></p>
-    </div>
-
-
-    <br>
-    <%= yield %>
-    <br>
-    <div class="notice-messages">
-      <p class="notice" style="color:white;"><%= notice %></p>
-      <p class="alert" style="color:white;"><%= alert %></p>
-    </div>
+  <% end %>
   </div>
+
+
+  <div id="overlay"></div>
+
+  <div id="specialBox">
+    <p><%= render 'home/about_us' %></p> 
+    <button class='toggleOverlay'>Close</button>
+  </div>
+  <div id="specialBoxb">
+    <p><%= render 'home/privacy' %></p> 
+    <button data-b='b' class='toggleOverlay'>Close</button>
+  </div>
+
+
+  <br>
+  <%= yield %>
+  <br>
+  <div class="notice-messages">
+    <p class="notice" style="color:white;"><%= notice %></p>
+    <p class="alert" style="color:white;"><%= alert %></p>
+  </div>
+</div>
+
+<div class="footerboxes">
+  <p><div id="aboutUsBox" class="aboutUsBox">
+    <button class='toggleOverlay'>About Us</button>
+  </div>
+
+  <div id="privacyBox" class="privacyBox">
+    <button data-b='b' class='toggleOverlay'>Privacy</button>
+  </div></p>
+</div>
 
 </body>
 </html>

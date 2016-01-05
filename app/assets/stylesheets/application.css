@@ -182,16 +182,26 @@ a {
   width: 45%;
 }
 
+.logged-in {
+  width: 572px;
+  margin: 0 auto;
+}
+
+.logged-out {
+  width: 583px;
+  margin: 0 auto;
+}
+
 .navleft {
   position: absolute;
-  top: -10px;
+  top: -40px;
   left: 20px;
+  z-index: 1000px;
 }
 
 .navmiddle {
   position: relative;
   margin: 50px auto 0 auto;
-  width: 340.25px;
 }
 
 .navright {
@@ -201,6 +211,11 @@ a {
   right: 0px;
 }
 
+.center-search {
+  width: 341px;
+  margin: 0 auto;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -208,10 +223,10 @@ ul {
 
 li {
   background-color: rgba(255,255,255,0.75);
-  border: 1px solid black;
   padding: 2px;
   display: inline;
   color: black;
+  border: none;
 }
 
 li a {
@@ -755,8 +770,8 @@ img.bg {
 
 .footerboxes {
   position: fixed;
-  display: inline-block;
-  width: 65px;
+  display: -webkit-inline-box;
+  width: 130px;
   margin: 0 auto;
   bottom: 20px;
   right: 30px;

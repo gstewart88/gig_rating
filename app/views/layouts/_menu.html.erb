@@ -1,4 +1,4 @@
-<div>
+<div class="center-search">
   <%= form_tag(performances_path, method: "get") do %>
   <%= text_field_tag(:name, nil, :placeholder => "Search Shows And Venues", :size => "50") %>
   <%= submit_tag "Go!", class: "search_go" %>
