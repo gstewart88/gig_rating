@@ -933,7 +933,7 @@ img.bg {
   padding: 5px;
   border: none;
   position: absolute;
-  top: 150px;
+  bottom: 8px;
   left: 265px;
 }
 
@@ -952,10 +952,8 @@ textarea {
   font-size: 15px;
   color: black;
   width: 100%;
-  padding-left: 9px;
-  padding-right: 9px;
+  padding: 0 10px;
   margin-left: -10px;
-  border: 1px solid black;
 }
 
 .new_review_top:hover {
@@ -972,7 +970,4 @@ textarea {
 
 .create_review_button:hover {
   background-color: rgba(255,255,255,1);
-}
-
-.fixed_butts {
 }
