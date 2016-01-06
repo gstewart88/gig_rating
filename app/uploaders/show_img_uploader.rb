@@ -15,6 +15,10 @@ class ShowImgUploader < CarrierWave::Uploader::Base
       process :resize_to_fill => [360, 203]
     end
 
+    version :showmed do
+      process :resize_to_fill => [360, 233]
+    end
+
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
