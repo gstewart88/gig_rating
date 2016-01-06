@@ -128,20 +128,20 @@ Performance.create!(show: s13, venue: v7, date: (DateTime.new(2015,12,22,17,00))
 
 User.delete_all
 
-u1 = User.create!(email: "simon@simon.com", username:"osborne1992", password: "password", role: Role.find_by(name: 'admin'), ranking: "7")
+u1 = User.create!(email: "simon@simon.com", username:"osborne1992", password: "password", role: Role.find_by(name: 'admin'), ranking: "7", user_image: File.open(File.join(Rails.root,"/public/site_images/Blue.png")))
 u2 = User.create!(email: "graeme@graeme.com", username:"graemes88", password: "password", role: Role.find_by(name: 'registered'), ranking: "4")
 u3 = User.create!(email: "syed@syed.com", username:"infinite_syed", password: "password", role: Role.find_by(name: 'registered'), ranking: "5")
 
 
 ShowReview.delete_all
 
-ShowReview.create!(title: "Dave Grohl headbangs atop a custom mechanised throne", show: s15, description: "In a year of well-publicised stage accidents, from Florence Welch’s foot injury to the Edge’s walk off the edge, Dave Grohl’s leg break in Gothenburg has had the most serious consequences, among which rescheduling several European stadium dates wasn’t even the worst. Unable to atone for cancelling their headline slot at Glastonbury, at least until next year, the Foo Fighters tonight turn their attentions to making it up to patient fans in Edinburgh, whose compensation is a furious and amusingly odd collector’s item of a show.", rating: "4", user: u1)
+ShowReview.create!(title: "Dave Grohl headbangs atop a custom mechanised throne", show: s15, description: "In a year of well-publicised stage accidents, from Florence Welch’s foot injury to the Edge’s walk off the edge, Dave Grohl’s leg break in Gothenburg has had the most serious consequences, among which rescheduling several European stadium dates wasn’t even the worst. Unable to atone for cancelling their headline slot at Glastonbury, at least until next year, the Foo Fighters tonight turn their attentions to making it up to patient fans in Edinburgh, whose compensation is a furious and amusingly odd collector’s item of a show.", rating: "5", user: u1)
 ShowReview.create!(title: "Ellie Goulding is a beast", show: s13, description: "Ellie Goulding has come a very long way from her acoustic strumming and trilling Herefordshire origins. In a skin-toned body suit and with a giant mane of blonde hair extensions cascading over black shaggy epaulettes, she bestrode the O2 Arena stage like a sci-fi warrior as digital interstellar explosions erupted on screens amid thunderous blasts of synthetic sound. All hail Barbarellie, queen of galactic pop.", rating: "5", user: u2)
 ShowReview.create!(title: "Valjean. At last. We see each other plain", show: s4, description: "If I could, I would get this entire show tattooed on my retinas", rating: "5", user: u2)
 ShowReview.create!(title: "We will rock you...they certainly do!", show: s9, description: "Great night out, really enjoyed this musical, I think maybe you need to be a Queen fan (which I am) to thoroughly enjoy it.
 The staging is quite minimal in the first half with the visuals mostly by the cast rather than the setting, good use of technology throughout, very powerful voices and lots of energy, we both enjoyed the second half more.
 Everyone was good but I really enjoyed the performances by Scaramouche, the Killer Queens No1 man (sorry name escapes me) and Pop. Our show had three understudies in situ but I can't remember who they were and it didn't matter to me! Check before hand if you are going for a particular performer.
-The Killer Queen had a strong voice but personally I didn't resonate with her character.", rating: "5", user: u3)
+The Killer Queen had a strong voice but personally I didn't resonate with her character.", rating: "4", user: u3)
 
 VenueReview.delete_all
 

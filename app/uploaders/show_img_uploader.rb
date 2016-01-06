@@ -19,6 +19,10 @@ class ShowImgUploader < CarrierWave::Uploader::Base
       process :resize_to_fill => [360, 233]
     end
 
+    version :profileimg do
+      process :resize_to_fill => [270, 270]
+    end
+
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
