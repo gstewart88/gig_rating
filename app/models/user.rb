@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   before_create :set_default_role
 
+  mount_uploader :user_image, ShowImgUploader
+
 
   def self.from_omniauth(auth)
     if user = User.find_by_email(auth.info.email)

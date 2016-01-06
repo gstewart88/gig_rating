@@ -128,7 +128,7 @@ Performance.create!(show: s13, venue: v7, date: (DateTime.new(2015,12,22,17,00))
 
 User.delete_all
 
-u1 = User.create!(email: "simon@simon.com", username:"osborne1992", password: "password", role: Role.find_by(name: 'admin'), ranking: "7", user_image: File.open(File.join(Rails.root,"/public/site_images/Blue.png")))
+u1 = User.create!(email: "simon@simon.com", username:"osborne1992", password: "password", role: Role.find_by(name: 'admin'), ranking: "7", user_image: File.open(File.join(Rails.root,"/public/site_images/Blue.jpg")))
 u2 = User.create!(email: "graeme@graeme.com", username:"graemes88", password: "password", role: Role.find_by(name: 'registered'), ranking: "4")
 u3 = User.create!(email: "syed@syed.com", username:"infinite_syed", password: "password", role: Role.find_by(name: 'registered'), ranking: "5")
 

@@ -971,3 +971,7 @@ textarea {
 .create_review_button:hover {
   background-color: rgba(255,255,255,1);
 }
+
+.profile-image {
+  border-radius: 50%;
+}
