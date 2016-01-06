@@ -27,6 +27,29 @@ class User < ActiveRecord::Base
       end
     end
   end
+
+ def ranking_rating
+  case 
+  when current_user.rating = "1"
+    'Newbie'
+  when current_user.rating = "2"
+    'Still wet behind the ears'
+  when current_user.rating = "3"
+    'Amateur'
+  when current_user.rating = "4"
+    'A real reviewer'
+  when current_user.rating = "5"
+    'seasoned reviewer'
+  when current_user.rating = "6"
+    'A reviewing veteran'
+  when current_user.rating = "7"
+    'You need help!!!'
+  when current_user.rating = "8"
+    "How do you have time to go to shows when you're writing reviews all the time?"
+  else
+    "You own this site. It is now yours"
+  end
+ end 
    
 
  def role?(role_to_compare_to)
