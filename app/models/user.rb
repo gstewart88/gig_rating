@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   :omniauthable, omniauth_providers: [:facebook]
 
   before_create :set_default_role
+  before_create :set_start_ranking
 
 
   def self.from_omniauth(auth)
@@ -28,25 +29,25 @@ class User < ActiveRecord::Base
     end
   end
 
- def ranking_rating(ranking)
+ def ranking_rating
   case 
-  when ranking = "1"
+  when ranking == 1
     'Newbie'
-  when ranking = "2"
+  when ranking == 2
     'Still wet behind the ears'
-  when ranking = "3"
+  when ranking == 3
     'Amateur'
-  when ranking = "4"
+  when ranking == 4
     'A real reviewer'
-  when ranking = "5"
+  when ranking == 5
     'seasoned reviewer'
-  when ranking = "6"
+  when ranking == 6
     'A reviewing veteran'
-  when ranking = "7"
+  when ranking == 7
     'You need help!!!'
-  when ranking = "8"
+  when ranking == 8
     "How do you have time to go to shows when you're writing reviews all the time?"
-  else
+  when ranking > 8
     "You own this site. It is now yours"
   end
  end 
@@ -60,6 +61,11 @@ class User < ActiveRecord::Base
  
  def set_default_role
    self.role ||= Role.find_by_name('registered')
+ end
+
+ private 
+ def set_start_ranking
+   self.ranking ||= 1
  end
 
 
