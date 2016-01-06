@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   when ranking == 8
     "How do you have time to go to shows when you're writing reviews all the time?"
   when ranking > 8
-    "You own this site. It is now yours"
+    "You own this site."
   end
  end 
    
