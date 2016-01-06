@@ -6,7 +6,7 @@
   <% if user_signed_in? %>
   <%= @venue_review.description %>
   <% else %>
-  <%= "#{@venue_review.description[0...5]}..."  %>
+  <%= "#{@venue_review.description[0...15]}..."  %>
   <button id='read_more'>Read More</button>
   <% end %>
   <br>

@@ -14,7 +14,7 @@
     <% if user_signed_in? %>
     <p><%= @show_review.description %></p>
     <% else %>
-    <p><%= "#{@show_review.description[0...5]}..."  %>
+    <p><%= "#{@show_review.description[0...15]}..."  %>
       <button id='read_more'>Read More</button></p>
       <% end %>
       <p>Submitted by <%= @show_review.user.try(:username) %> on <%= (@show_review.created_at).strftime("%d %B %Y") %></p>
