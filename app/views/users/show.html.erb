@@ -8,7 +8,7 @@
 <p><strong>Username: </strong><%= current_user.username %></p>
 <p><strong>Name: </strong><%= current_user.name %></p>
 <p><strong>Email: </strong><%= current_user.email %></p>
-<p><strong>Ranking: </strong><%= current_user.ranking %></p>
+<p><strong>Ranking: </strong><%= current_user.ranking_rating(current_user.ranking) %></p>
 </div>
 <%= current_user.try(:location) %>
 <div class="edit_profile_link">
