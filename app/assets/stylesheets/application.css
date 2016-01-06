@@ -788,8 +788,8 @@ img.bg {
   display: -webkit-inline-box;
   width: 130px;
   margin: 0 auto;
-  bottom: 20px;
-  right: 30px;
+  top: 95%;
+  left: 85%;
 }
 
 .aboutUsBox {
