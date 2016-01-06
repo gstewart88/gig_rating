@@ -15,7 +15,8 @@
       <%= venue_review.venue.try(:name) %>
     </div>
     <div class="thumbnail-sublabel-right">
-      <%= venue_review.user.try(:username) %>
+      <%= venue_review.user.try(:username) %> on
+        <%= l(venue_review.created_at, format: '%B, %d %Y %H:%M') %>
     </div>
   </div>
   <%= image_tag venue_review.venue.try(:venue_img).gridlist.url %>

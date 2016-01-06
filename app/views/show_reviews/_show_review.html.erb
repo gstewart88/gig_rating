@@ -14,7 +14,8 @@
       <%= show_review.show.try(:name) %>
     </div>
     <div class="thumbnail-sublabel-right">
-      <%= show_review.user.try(:username) %>
+      <%= show_review.user.try(:username) %> on
+        <%= l(show_review.created_at, format: '%B, %d %Y %H:%M') %>
     </div>
   </div>
   <%= image_tag show_review.show.try(:show_img).gridlist.url %>
