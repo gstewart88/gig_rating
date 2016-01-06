@@ -2,7 +2,7 @@
 <div class="show_info_area sia_small">
   <br>
   <h3><%= @venue_review.title %></h3>
-  <p><%= @venue_review.venue.name %></p>
+  <p><%= link_to "#{@venue_review.venue.name}", venue_path(@venue_review.venue.id) %> <small><%= link_to "view location", venue_path(@venue_review.venue.id) %></small></p>
   <% if user_signed_in? %>
   <%= @venue_review.description %>
   <% else %>

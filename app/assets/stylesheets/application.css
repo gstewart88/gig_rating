@@ -642,7 +642,7 @@ img.bg {
 }
 
 .sia_tall {
-  height: 505px;
+  height: 405px;
 }
 
 .sia_med {
@@ -652,12 +652,22 @@ img.bg {
 .show_info_area_left {
   position: absolute;
   top: 200px;
-  left: 300px;
+  left: 280px;
+}
+
+.more_left_area {
+  left: 210px;
 }
 
 .show_info_area_right {
   position: relative;
   text-align: right;
+}
+
+.map-go-right {
+  position: absolute;
+  top: 75px;
+  right: 485px;
 }
 
 .show_info_area_button-edit {
@@ -912,8 +922,8 @@ img.bg {
 
 .venue_show_buttons {
   position: fixed;
-  bottom: 60px;
-  right: 220px;
+  bottom: 135px;
+  left: 210px;
 }
 
 .reviews_back_button {
