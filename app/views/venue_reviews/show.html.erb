@@ -81,5 +81,5 @@
     <% end %>
   </p></center>
   <p>Submitted by <%= @venue_review.user.try(:username) %> on <%= (@venue_review.created_at).strftime("%d %B %Y") %></p>
-  <%= link_to('Edit', edit_venue_review_path(@venue_review), class: "show_info_area_button-edit") if can? :update, VenueReview %><%= link_to 'Back', venue_reviews_path, class: "show_info_area_button-back" %>
+  <%= link_to('Edit', edit_venue_review_path(@venue_review), class: "show_info_area_button-edit") if can? :update, VenueReview %><%= link_to 'Back', venue_reviews_path, class: "show_info_area_button-back remove_button_margin" %>
 </div>
