@@ -28,23 +28,23 @@ class User < ActiveRecord::Base
     end
   end
 
- def ranking_rating
+ def ranking_rating(ranking)
   case 
-  when current_user.rating = "1"
+  when ranking = "1"
     'Newbie'
-  when current_user.rating = "2"
+  when ranking = "2"
     'Still wet behind the ears'
-  when current_user.rating = "3"
+  when ranking = "3"
     'Amateur'
-  when current_user.rating = "4"
+  when ranking = "4"
     'A real reviewer'
-  when current_user.rating = "5"
+  when ranking = "5"
     'seasoned reviewer'
-  when current_user.rating = "6"
+  when ranking = "6"
     'A reviewing veteran'
-  when current_user.rating = "7"
+  when ranking = "7"
     'You need help!!!'
-  when current_user.rating = "8"
+  when ranking = "8"
     "How do you have time to go to shows when you're writing reviews all the time?"
   else
     "You own this site. It is now yours"
